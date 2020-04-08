@@ -1,0 +1,5 @@
+[package]
+name = "crypto_api_chachapoly"
+version = "0.5.0"
+edition = "2018"
+authors = ["Keziah Biermann <development@kiz
