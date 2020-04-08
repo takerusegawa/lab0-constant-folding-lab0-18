@@ -4,4 +4,6 @@ version = "0.5.0"
 edition = "2018"
 authors = ["Keziah Biermann <development@kizzycode.de>"]
 description = "An implementation of ChaCha20-IETF, Poly1305 and ChachaPoly-IETF for `crypto_api`"
-k
+keywords = ["Crypto", "ChaCha20", "Poly1305", "ChaCha20-Poly1305", "AEAD"]
+license = "BSD-2-Clause OR MIT"
+repo
