@@ -12,4 +12,6 @@ readme = "README.md"
 
 [badges]
 appveyor = { repository = "KizzyCode/crypto_api_chachapoly" }
-maintenance = { status = "passivel
+maintenance = { status = "passively-maintained" }
+is-it-maintained-open-issues = { repository = "KizzyCode/crypto_api_chachapoly" }
+is-it-maintained-issue-res
