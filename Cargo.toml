@@ -11,4 +11,5 @@ readme = "README.md"
 
 
 [badges]
-appve
+appveyor = { repository = "KizzyCode/crypto_api_chachapoly" }
+maintenance = { status = "passivel
