@@ -1,0 +1,1 @@
+[![docs.rs](https://docs.rs/crypto_api_chachapoly/badge.svg)](https://d
