@@ -21,3 +21,12 @@ is-it-maintained-issue-resolution = { repository = "KizzyCode/crypto_api_chachap
 crypto_api = "0.2"
 
 [dev-dependencies]
+json = "0.12"
+hex = "0.4"
+
+
+[profile.release]
+overflow-checks = true
+
+[profile.bench]
+overflow-checks = true
