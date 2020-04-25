@@ -6,4 +6,10 @@
 [![AppVeyor CI](https://ci.appveyor.com/api/projects/status/github/KizzyCode/crypto_api_chachapoly?svg=true)](https://ci.appveyor.com/project/KizzyCode/crypto-api-chachapoly)
 [![dependency status](https://deps.rs/crate/crypto_api_chachapoly/0.5.0/status.svg)](https://deps.rs/crate/crypto_api_chachapoly/0.5.0)
 
-# crypto_api_chachap
+# crypto_api_chachapoly
+Welcome to `crypto_api_chachapoly` 🎉
+
+
+## About
+This crate implements
+[the IETF version of ChaCha20](https:/
