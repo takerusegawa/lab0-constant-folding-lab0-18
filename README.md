@@ -12,4 +12,5 @@ Welcome to `crypto_api_chachapoly` 🎉
 
 ## About
 This crate implements
-[the IETF version of ChaCha20](https:/
+[the IETF version of ChaCha20](https://tools.ietf.org/html/rfc8439#section-2.4), XChaCha20,
+[Poly1305](https://tools.ietf.org/html/rfc8439#section-
