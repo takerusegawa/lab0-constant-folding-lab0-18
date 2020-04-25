@@ -4,4 +4,6 @@
 [![crates.io](https://img.shields.io/crates/v/crypto_api_chachapoly.svg)](https://crates.io/crates/crypto_api_chachapoly)
 [![Download numbers](https://img.shields.io/crates/d/crypto_api_chachapoly.svg)](https://crates.io/crates/crypto_api_chachapoly)
 [![AppVeyor CI](https://ci.appveyor.com/api/projects/status/github/KizzyCode/crypto_api_chachapoly?svg=true)](https://ci.appveyor.com/project/KizzyCode/crypto-api-chachapoly)
-[![dependency status](https://deps.rs/crate/crypto_api_c
+[![dependency status](https://deps.rs/crate/crypto_api_chachapoly/0.5.0/status.svg)](https://deps.rs/crate/crypto_api_chachapoly/0.5.0)
+
+# crypto_api_chachap
