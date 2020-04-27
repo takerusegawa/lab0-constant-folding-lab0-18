@@ -21,4 +21,5 @@ XChachaPoly.
 ## Security
 ⚠️ Some words of warning ahead: This library has not been audited yet – use at your own risk! ⚠️
 
-However we
+However we try to do things right from the start – this library does not use unsafe Rust, is
+[KISS](https://en.wikipedia.org/wik
