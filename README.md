@@ -19,3 +19,6 @@ XChachaPoly.
 
 
 ## Security
+⚠️ Some words of warning ahead: This library has not been audited yet – use at your own risk! ⚠️
+
+However we
