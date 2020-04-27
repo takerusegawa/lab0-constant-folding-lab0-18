@@ -22,4 +22,7 @@ XChachaPoly.
 ⚠️ Some words of warning ahead: This library has not been audited yet – use at your own risk! ⚠️
 
 However we try to do things right from the start – this library does not use unsafe Rust, is
-[KISS](https://en.wikipedia.org/wik
+[KISS](https://en.wikipedia.org/wiki/KISS_principle), tested against various test vectors and uses
+constant time implementations only.
+
+### T
