@@ -28,4 +28,7 @@ constant time implementations only.
 ### Test Vectors
 All implementations pass all reference test vectors and are assumed to produce correct results even
 in corner cases. We also use API test vectors (to test input validation) and failure test vectors to
-test our
+test our MAC verification.
+
+### Fuzzing Against [`sodiumoxide`](https://crates.io/crates/sodiumoxide)
+The git repository 
