@@ -26,4 +26,6 @@ However we try to do things right from the start – this library does not use u
 constant time implementations only.
 
 ### Test Vectors
-All implementations pass all reference test vectors and are assumed to produce corre
+All implementations pass all reference test vectors and are assumed to produce correct results even
+in corner cases. We also use API test vectors (to test input validation) and failure test vectors to
+test our
