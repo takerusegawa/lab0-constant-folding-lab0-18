@@ -32,4 +32,6 @@ test our MAC verification.
 
 ### Fuzzing Against [`sodiumoxide`](https://crates.io/crates/sodiumoxide)
 The git repository contains a `fuzz`-subcrate that generates random inputs and tests if this crate
-and [`sodiumoxide`](https://c
+and [`sodiumoxide`](https://crates.io/crates/sodiumoxide) produce the same result.
+
+It can be run by cloning the git repo, going into "fuzz/" and ru
