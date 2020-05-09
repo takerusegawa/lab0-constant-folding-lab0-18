@@ -34,4 +34,5 @@ test our MAC verification.
 The git repository contains a `fuzz`-subcrate that generates random inputs and tests if this crate
 and [`sodiumoxide`](https://crates.io/crates/sodiumoxide) produce the same result.
 
-It can be run by cloning the git repo, going into "fuzz/" and ru
+It can be run by cloning the git repo, going into "fuzz/" and running `cargo run --release`. The
+crate uses all available CPU threads and stops only if there is an unexpected
