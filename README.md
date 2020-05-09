@@ -35,4 +35,5 @@ The git repository contains a `fuzz`-subcrate that generates random inputs and t
 and [`sodiumoxide`](https://crates.io/crates/sodiumoxide) produce the same result.
 
 It can be run by cloning the git repo, going into "fuzz/" and running `cargo run --release`. The
-crate uses all available CPU threads and stops only if there is an unexpected
+crate uses all available CPU threads and stops only if there is an unexpected different result. You
+can also specify the maximum length if the randomly generated and sized test input
