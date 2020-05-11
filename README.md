@@ -36,4 +36,6 @@ and [`sodiumoxide`](https://crates.io/crates/sodiumoxide) produce the same resul
 
 It can be run by cloning the git repo, going into "fuzz/" and running `cargo run --release`. The
 crate uses all available CPU threads and stops only if there is an unexpected different result. You
-can also specify the maximum length if the randomly generated and sized test input
+can also specify the maximum length if the randomly generated and sized test input; just set 
+`TEST_VECTOR_LIMIT` as environment variable. **If you find an unexpected different result, please
+copy th
