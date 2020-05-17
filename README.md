@@ -38,4 +38,7 @@ It can be run by cloning the git repo, going into "fuzz/" and running `cargo run
 crate uses all available CPU threads and stops only if there is an unexpected different result. You
 can also specify the maximum length if the randomly generated and sized test input; just set 
 `TEST_VECTOR_LIMIT` as environment variable. **If you find an unexpected different result, please
-copy th
+copy the entire output and create a new issue on GitHub! 😊**
+
+### Constant Time Implementations
+All implementations are designed
