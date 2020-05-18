@@ -41,4 +41,5 @@ can also specify the maximum length if the randomly generated and sized test inp
 copy the entire output and create a new issue on GitHub! 😊**
 
 ### Constant Time Implementations
-All implementations are designed
+All implementations are designed to be invulnerable against timing side-channel attacks by
+performing all secret-dependent computation
