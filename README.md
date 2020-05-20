@@ -46,4 +46,5 @@ performing all secret-dependent computations in constant time:
  - ChaCha20 already does this by design
  - Poly1305 is based on the 
    [public domain Poly1305-Donna implementation (32 bit version)](https://github.com/floodyberry/poly1305-donna)
-   with some ideas from [BearSSL](https://bea
+   with some ideas from [BearSSL](https://bearssl.org) (note that this implementation may not be
+   constant time [on some older/low end ARM CPUs](https://b
