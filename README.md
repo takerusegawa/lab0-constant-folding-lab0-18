@@ -45,4 +45,5 @@ All implementations are designed to be invulnerable against timing side-channel 
 performing all secret-dependent computations in constant time:
  - ChaCha20 already does this by design
  - Poly1305 is based on the 
-   [public domain Poly1305-Donna impl
+   [public domain Poly1305-Donna implementation (32 bit version)](https://github.com/floodyberry/poly1305-donna)
+   with some ideas from [BearSSL](https://bea
