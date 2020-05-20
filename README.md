@@ -42,4 +42,7 @@ copy the entire output and create a new issue on GitHub! 😊**
 
 ### Constant Time Implementations
 All implementations are designed to be invulnerable against timing side-channel attacks by
-performing all secret-dependent computation
+performing all secret-dependent computations in constant time:
+ - ChaCha20 already does this by design
+ - Poly1305 is based on the 
+   [public domain Poly1305-Donna impl
