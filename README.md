@@ -51,4 +51,8 @@ performing all secret-dependent computations in constant time:
  - The AEAD construction is also constant time by design (provided that both underlying algorithms
    are constant time)
 
-For more information about constant time implementation
+For more information about constant time implementations, take a look
+[here](https://bearssl.org/constanttime.html) and [here](https://bearssl.org/ctmul.html).
+
+### Memory Hygiene
+`crypto
