@@ -48,4 +48,7 @@ performing all secret-dependent computations in constant time:
    [public domain Poly1305-Donna implementation (32 bit version)](https://github.com/floodyberry/poly1305-donna)
    with some ideas from [BearSSL](https://bearssl.org) (note that this implementation may not be
    constant time [on some older/low end ARM CPUs](https://bearssl.org/ctmul.html#arm))
- - The AEAD construction is also constant time by design (provided that
+ - The AEAD construction is also constant time by design (provided that both underlying algorithms
+   are constant time)
+
+For more information about constant time implementation
