@@ -55,4 +55,5 @@ For more information about constant time implementations, take a look
 [here](https://bearssl.org/constanttime.html) and [here](https://bearssl.org/ctmul.html).
 
 ### Memory Hygiene
-`crypto
+`crypto_api_chachapoly` does not perform any attempts to erase sensitive contents from memory.
+However all sen
