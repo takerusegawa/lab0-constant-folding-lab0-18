@@ -56,4 +56,5 @@ For more information about constant time implementations, take a look
 
 ### Memory Hygiene
 `crypto_api_chachapoly` does not perform any attempts to erase sensitive contents from memory.
-However all sen
+However all sensitive contents are stored in heap-allocated memory, so if you're using an erasing
+memory-allocator like [MAProper
