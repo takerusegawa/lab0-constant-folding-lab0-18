@@ -61,4 +61,8 @@ memory-allocator like [MAProper](https://crates.io/crates/ma_proper) they will b
 
 Using an erasing memory allocator is a good idea anyway, because Rust makes it pretty hard to keep
 track on how the memory is managed under the hood – the memory allocator on the other hand sees
-everything that happens on the heap and can take care of it accord
+everything that happens on the heap and can take care of it accordingly.
+
+
+## Dependencies
+Because this code implements the [`crypto_api`](https://github.com/KizzyC
