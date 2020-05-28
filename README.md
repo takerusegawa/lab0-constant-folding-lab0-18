@@ -59,4 +59,5 @@ For more information about constant time implementations, take a look
 However all sensitive contents are stored in heap-allocated memory, so if you're using an erasing
 memory-allocator like [MAProper](https://crates.io/crates/ma_proper) they will be erased nontheless.
 
-Using an erasing memory 
+Using an erasing memory allocator is a good idea anyway, because Rust makes it pretty hard to keep
+track on how the memory is mana
