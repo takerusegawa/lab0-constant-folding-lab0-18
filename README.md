@@ -60,4 +60,5 @@ However all sensitive contents are stored in heap-allocated memory, so if you're
 memory-allocator like [MAProper](https://crates.io/crates/ma_proper) they will be erased nontheless.
 
 Using an erasing memory allocator is a good idea anyway, because Rust makes it pretty hard to keep
-track on how the memory is mana
+track on how the memory is managed under the hood – the memory allocator on the other hand sees
+everything that happens on the heap and can take care of it accord
