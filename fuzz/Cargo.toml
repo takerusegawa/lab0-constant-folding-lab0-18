@@ -5,4 +5,11 @@ authors = ["Keziah Biermann <development@kizzycode.de>"]
 edition = "2018"
 
 
-[featur
+[features]
+default = []
+
+
+[dependencies]
+crypto_api_chachapoly = { path = "../" }
+sodiumoxide = "^0.2"
+num_c
