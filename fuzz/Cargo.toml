@@ -20,4 +20,9 @@ hex = "^0.4"
 overflow-checks = true
 panic = "abort"
 
-[profile.r
+[profile.release]
+overflow-checks = true
+panic = "abort"
+
+[profile.bench]
+overflow-checks = true
