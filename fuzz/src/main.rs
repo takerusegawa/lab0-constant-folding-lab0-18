@@ -5,4 +5,9 @@ use sodiumoxide::crypto::{
 };
 use hex::ToHex;
 use std::{
-    env, thread, ops::Range, 
+    env, thread, ops::Range, str::FromStr, time::Duration,
+    sync::atomic::{ AtomicU64, Ordering::Relaxed }
+};
+
+
+/// Set jemalloc as allocator if
