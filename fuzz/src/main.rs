@@ -10,4 +10,6 @@ use std::{
 };
 
 
-/// Set jemalloc as allocator if
+/// Set jemalloc as allocator if specified
+#[cfg(feature = "jemalloc")]
+    #[global_allocator] static ALLOC: jemallocator::Jemalloc =
