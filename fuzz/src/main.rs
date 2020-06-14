@@ -12,4 +12,10 @@ use std::{
 
 /// Set jemalloc as allocator if specified
 #[cfg(feature = "jemalloc")]
-    #[global_allocator] static ALLOC: jemallocator::Jemalloc =
+    #[global_allocator] static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
+/// An atomic test counter
+static COUNTER: AtomicU64 = AtomicU64::new(0);
+
+
+/// A fast bu
