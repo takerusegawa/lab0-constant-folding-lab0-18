@@ -24,4 +24,9 @@ struct SecureRng {
     ctr: u64
 }
 impl SecureRng {
-    /// Creates a 
+    /// Creates a new RNG
+    pub fn new() -> Self {
+        Self{ seed: salsa20::gen_key(), ctr: 0 }
+    }
+    
+    /// Fills `buf` with secure random byt
