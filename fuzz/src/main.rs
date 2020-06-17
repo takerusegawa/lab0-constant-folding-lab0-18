@@ -18,4 +18,10 @@ use std::{
 static COUNTER: AtomicU64 = AtomicU64::new(0);
 
 
-/// A fast bu
+/// A fast but still secure RNG
+struct SecureRng {
+    seed: salsa20::Key,
+    ctr: u64
+}
+impl SecureRng {
+    /// Creates a 
