@@ -29,4 +29,7 @@ impl SecureRng {
         Self{ seed: salsa20::gen_key(), ctr: 0 }
     }
     
-    /// Fills `buf` with secure random byt
+    /// Fills `buf` with secure random bytes
+    pub fn random(&mut self, buf: &mut[u8]) {
+        // Create nonce
+        let nonce = salsa20::Nonce::fro
