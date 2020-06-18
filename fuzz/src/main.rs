@@ -35,4 +35,8 @@ impl SecureRng {
         let nonce = salsa20::Nonce::from_slice(&self.ctr.to_be_bytes()).unwrap();
         self.ctr += 1;
         
-        // Create random byt
+        // Create random bytes
+        buf.iter_mut().for_each(|b| *b = 0);
+        salsa20::stream_xor_inplace(buf, &nonce, &self.seed);
+    }
+  
