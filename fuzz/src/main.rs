@@ -32,4 +32,7 @@ impl SecureRng {
     /// Fills `buf` with secure random bytes
     pub fn random(&mut self, buf: &mut[u8]) {
         // Create nonce
-        let nonce = salsa20::Nonce::fro
+        let nonce = salsa20::Nonce::from_slice(&self.ctr.to_be_bytes()).unwrap();
+        self.ctr += 1;
+        
+        // Create random byt
