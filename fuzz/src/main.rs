@@ -39,4 +39,5 @@ impl SecureRng {
         buf.iter_mut().for_each(|b| *b = 0);
         salsa20::stream_xor_inplace(buf, &nonce, &self.seed);
     }
-  
+    /// Creates a `len`-sized vector filled with secure random bytes
+    pub fn random_vec(&mut self, len: usize) 
