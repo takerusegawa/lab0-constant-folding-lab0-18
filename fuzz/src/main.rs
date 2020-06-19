@@ -40,4 +40,9 @@ impl SecureRng {
         salsa20::stream_xor_inplace(buf, &nonce, &self.seed);
     }
     /// Creates a `len`-sized vector filled with secure random bytes
-    pub fn random_vec(&mut self, len: usize) 
+    pub fn random_vec(&mut self, len: usize) -> Vec<u8> {
+        let mut buf = vec![0; len];
+        self.random(&mut buf);
+        buf
+    }
+ 
