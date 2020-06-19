@@ -46,4 +46,6 @@ impl SecureRng {
         buf
     }
     /// Computes a secure random number within `range`
-    pub fn random_range(&mut self, range: Range
+    pub fn random_range(&mut self, range: Range<u128>) -> u128 {
+        // Compute the bucket size and amount
+        let bucket_size = range.end - range.start;
