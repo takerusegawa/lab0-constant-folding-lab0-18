@@ -45,4 +45,5 @@ impl SecureRng {
         self.random(&mut buf);
         buf
     }
- 
+    /// Computes a secure random number within `range`
+    pub fn random_range(&mut self, range: Range
