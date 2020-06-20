@@ -49,3 +49,7 @@ impl SecureRng {
     pub fn random_range(&mut self, range: Range<u128>) -> u128 {
         // Compute the bucket size and amount
         let bucket_size = range.end - range.start;
+        let bucket_count = u128::max_value() / bucket_size;
+        
+        // Compute the number
+    
