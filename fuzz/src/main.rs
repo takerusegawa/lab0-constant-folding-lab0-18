@@ -55,4 +55,7 @@ impl SecureRng {
         let mut num = [0; 16];
         loop {
             // Generates a random number
-            self.ra
+            self.random(&mut num);
+            let num = u128::from_ne_bytes(num);
+            
+            // Check if the number falls into
