@@ -61,4 +61,7 @@ impl SecureRng {
             // Check if the number falls into the
             if num < bucket_size * bucket_count {
                 return (num % bucket_size) + range.start
-      
+            }
+        }
+    }
+    /// Creates a vec with random sized length within `range` filled 
