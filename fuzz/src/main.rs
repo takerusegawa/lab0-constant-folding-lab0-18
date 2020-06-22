@@ -52,4 +52,7 @@ impl SecureRng {
         let bucket_count = u128::max_value() / bucket_size;
         
         // Compute the number
-    
+        let mut num = [0; 16];
+        loop {
+            // Generates a random number
+            self.ra
