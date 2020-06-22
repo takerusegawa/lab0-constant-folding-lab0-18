@@ -58,4 +58,7 @@ impl SecureRng {
             self.random(&mut num);
             let num = u128::from_ne_bytes(num);
             
-            // Check if the number falls into
+            // Check if the number falls into the
+            if num < bucket_size * bucket_count {
+                return (num % bucket_size) + range.start
+      
