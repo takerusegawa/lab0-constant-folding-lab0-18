@@ -66,3 +66,5 @@ impl SecureRng {
     }
     /// Creates a vec with random sized length within `range` filled with secure random data
     pub fn random_len_vec(&mut self, range: Range<usize>) -> Vec<u8> {
+        let range = (range.start as u128)..(range.end as u128);
+        let len = self.random_range(range) 
