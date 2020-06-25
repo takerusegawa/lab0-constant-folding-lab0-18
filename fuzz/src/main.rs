@@ -81,4 +81,6 @@ struct ChachaPolyIetfTV {
     ad: Vec<u8>
 }
 impl ChachaPolyIetfTV {
-    /// Creates a random 
+    /// Creates a random test vector
+    pub fn random(limit: usize, rng: &mut SecureRng) -> Self {
+        Self 
