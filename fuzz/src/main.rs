@@ -74,4 +74,11 @@ impl SecureRng {
 
 
 /// A `ChachaPolyIetf` test vector
-struct ChachaP
+struct ChachaPolyIetfTV {
+    key: Vec<u8>,
+    nonce: Vec<u8>,
+    plaintext: Vec<u8>,
+    ad: Vec<u8>
+}
+impl ChachaPolyIetfTV {
+    /// Creates a random 
