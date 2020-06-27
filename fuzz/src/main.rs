@@ -83,4 +83,7 @@ struct ChachaPolyIetfTV {
 impl ChachaPolyIetfTV {
     /// Creates a random test vector
     pub fn random(limit: usize, rng: &mut SecureRng) -> Self {
-        Self 
+        Self {
+            key: rng.random_vec(32),
+            nonce: rng.random_vec(12),
+            plaintext: rng
