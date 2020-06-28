@@ -91,4 +91,7 @@ impl ChachaPolyIetfTV {
         }
     }
     
-    /// Tes
+    /// Tests the test vector
+    pub fn test(self) {
+        // Seal the data using `crypto_api_chachapoly`
+        let mut ct_
