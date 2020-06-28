@@ -94,4 +94,6 @@ impl ChachaPolyIetfTV {
     /// Tests the test vector
     pub fn test(self) {
         // Seal the data using `crypto_api_chachapoly`
-        let mut ct_
+        let mut ct_ours = vec![0u8; self.plaintext.len() + 16];
+        ChachaPolyIetf.seal_to(
+            &mut ct_ours, &self
