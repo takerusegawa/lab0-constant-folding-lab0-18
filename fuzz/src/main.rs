@@ -86,4 +86,9 @@ impl ChachaPolyIetfTV {
         Self {
             key: rng.random_vec(32),
             nonce: rng.random_vec(12),
-            plaintext: rng
+            plaintext: rng.random_len_vec(0..limit),
+            ad: rng.random_len_vec(0..limit)
+        }
+    }
+    
+    /// Tes
