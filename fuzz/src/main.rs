@@ -100,3 +100,6 @@ impl ChachaPolyIetfTV {
             self.key.as_ref(), self.nonce.as_ref()
         ).unwrap();
         
+        // Seal the data using `sodiumoxide`
+        let ct_sodium = chacha20poly1305_ietf::seal(
+            &sel
