@@ -102,4 +102,6 @@ impl ChachaPolyIetfTV {
         
         // Seal the data using `sodiumoxide`
         let ct_sodium = chacha20poly1305_ietf::seal(
-            &sel
+            &self.plaintext,
+            if self.ad.len() > 0 { Some(&self.ad) } else { None },
+            &chacha20poly1305_ietf
