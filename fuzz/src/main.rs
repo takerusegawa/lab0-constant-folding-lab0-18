@@ -104,4 +104,5 @@ impl ChachaPolyIetfTV {
         let ct_sodium = chacha20poly1305_ietf::seal(
             &self.plaintext,
             if self.ad.len() > 0 { Some(&self.ad) } else { None },
-            &chacha20poly1305_ietf
+            &chacha20poly1305_ietf::Nonce::from_slice(&self.nonce).unwrap(),
+            &chacha20poly1305_ietf::Key::from_slice(&self.ke
