@@ -113,4 +113,5 @@ impl ChachaPolyIetfTV {
             eprintln!("ChachaPoly Mismatch!. Inputs:");
             eprintln!("Key: {}", self.key.encode_hex::<String>());
             eprintln!("Nonce: {}", self.nonce.encode_hex::<String>());
-            eprintln!("Plainte
+            eprintln!("Plaintext: {}", self.plaintext.encode_hex::<String>());
+            eprintln!("Additional data: {}", self.ad.encode_
