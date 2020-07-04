@@ -110,4 +110,6 @@ impl ChachaPolyIetfTV {
         
         // Compare the data
         if ct_ours != ct_sodium {
-            e
+            eprintln!("ChachaPoly Mismatch!. Inputs:");
+            eprintln!("Key: {}", self.key.encode_hex::<String>());
+            
