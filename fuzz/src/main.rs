@@ -114,4 +114,6 @@ impl ChachaPolyIetfTV {
             eprintln!("Key: {}", self.key.encode_hex::<String>());
             eprintln!("Nonce: {}", self.nonce.encode_hex::<String>());
             eprintln!("Plaintext: {}", self.plaintext.encode_hex::<String>());
-            eprintln!("Additional data: {}", self.ad.encode_
+            eprintln!("Additional data: {}", self.ad.encode_hex::<String>());
+            eprintln!("Outputs:");
+            eprintln!("Ours: {}", ct_ours.encode_hex::<Strin
