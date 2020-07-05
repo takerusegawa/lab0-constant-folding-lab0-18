@@ -116,4 +116,6 @@ impl ChachaPolyIetfTV {
             eprintln!("Plaintext: {}", self.plaintext.encode_hex::<String>());
             eprintln!("Additional data: {}", self.ad.encode_hex::<String>());
             eprintln!("Outputs:");
-            eprintln!("Ours: {}", ct_ours.encode_hex::<Strin
+            eprintln!("Ours: {}", ct_ours.encode_hex::<String>());
+            eprintln!("Libsodium: {}", ct_sodium.encode_hex::<String>());
+            panic!("... aborting. Plea
