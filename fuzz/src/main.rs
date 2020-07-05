@@ -118,4 +118,11 @@ impl ChachaPolyIetfTV {
             eprintln!("Outputs:");
             eprintln!("Ours: {}", ct_ours.encode_hex::<String>());
             eprintln!("Libsodium: {}", ct_sodium.encode_hex::<String>());
-            panic!("... aborting. Plea
+            panic!("... aborting. Please save and report this error!");
+        }
+        COUNTER.fetch_add(1, Relaxed);
+    }
+}
+
+
+/
