@@ -134,4 +134,6 @@ struct XChachaPolyTV {
 }
 impl XChachaPolyTV {
     /// Creates a random test vector
-    pub fn random(limit
+    pub fn random(limit: usize, rng: &mut SecureRng) -> Self {
+        Self {
+            key: rng.random_vec(
