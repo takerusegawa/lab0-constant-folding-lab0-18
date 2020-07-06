@@ -125,4 +125,9 @@ impl ChachaPolyIetfTV {
 }
 
 
-/
+/// A `XChachaPoly` test vector
+struct XChachaPolyTV {
+    key: Vec<u8>,
+    nonce: Vec<u8>,
+    plaintext: Vec<u8>,
+ 
