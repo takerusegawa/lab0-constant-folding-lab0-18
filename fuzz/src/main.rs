@@ -130,4 +130,8 @@ struct XChachaPolyTV {
     key: Vec<u8>,
     nonce: Vec<u8>,
     plaintext: Vec<u8>,
- 
+    ad: Vec<u8>
+}
+impl XChachaPolyTV {
+    /// Creates a random test vector
+    pub fn random(limit
