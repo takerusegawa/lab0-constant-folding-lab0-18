@@ -139,4 +139,10 @@ impl XChachaPolyTV {
             key: rng.random_vec(32),
             nonce: rng.random_vec(24),
             plaintext: rng.random_len_vec(0..limit),
-            
+            ad: rng.random_len_vec(0..limit)
+        }
+    }
+    
+    /// Tests the test vector
+    pub fn test(self) {
+        // Seal the da
