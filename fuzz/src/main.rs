@@ -136,4 +136,7 @@ impl XChachaPolyTV {
     /// Creates a random test vector
     pub fn random(limit: usize, rng: &mut SecureRng) -> Self {
         Self {
-            key: rng.random_vec(
+            key: rng.random_vec(32),
+            nonce: rng.random_vec(24),
+            plaintext: rng.random_len_vec(0..limit),
+            
