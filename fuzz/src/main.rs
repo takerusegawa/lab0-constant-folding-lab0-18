@@ -145,4 +145,7 @@ impl XChachaPolyTV {
     
     /// Tests the test vector
     pub fn test(self) {
-        // Seal the da
+        // Seal the data using `crypto_api_chachapoly`
+        let mut ct_ours = vec![0u8; self.plaintext.len() + 16];
+        XChachaPoly.seal_to(
+   
