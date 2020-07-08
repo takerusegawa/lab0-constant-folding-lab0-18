@@ -148,4 +148,5 @@ impl XChachaPolyTV {
         // Seal the data using `crypto_api_chachapoly`
         let mut ct_ours = vec![0u8; self.plaintext.len() + 16];
         XChachaPoly.seal_to(
-   
+            &mut ct_ours, &self.plaintext, &self.ad,
+            self.key.as_ref(), self.nonce.as_
