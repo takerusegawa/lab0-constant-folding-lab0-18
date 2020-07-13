@@ -155,4 +155,5 @@ impl XChachaPolyTV {
         // Seal the data using `sodiumoxide`
         let ct_sodium = xchacha20poly1305_ietf::seal(
             &self.plaintext,
-            if self.ad.len() > 0 { Some
+            if self.ad.len() > 0 { Some(&self.ad) } else { None },
+            &xchacha20poly1305_ietf::Nonce::from_slice(&self.nonce).u
