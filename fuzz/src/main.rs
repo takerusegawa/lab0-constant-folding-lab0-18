@@ -164,4 +164,5 @@ impl XChachaPolyTV {
         if ct_ours != ct_sodium {
             eprintln!("XChachaPoly Mismatch!. Inputs:");
             eprintln!("Key: {}", self.key.encode_hex::<String>());
-            eprintln!("Nonce
+            eprintln!("Nonce: {}", self.nonce.encode_hex::<String>());
+            eprintln!("Plaintext: {}", self.plaintext.encode_hex:
