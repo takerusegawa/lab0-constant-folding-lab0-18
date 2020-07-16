@@ -167,4 +167,6 @@ impl XChachaPolyTV {
             eprintln!("Nonce: {}", self.nonce.encode_hex::<String>());
             eprintln!("Plaintext: {}", self.plaintext.encode_hex::<String>());
             eprintln!("Additional data: {}", self.ad.encode_hex::<String>());
-            eprintl
+            eprintln!("Outputs:");
+            eprintln!("Ours: {}", ct_ours.encode_hex::<String>());
+            eprintln!("Lib
