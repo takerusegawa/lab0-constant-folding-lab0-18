@@ -169,4 +169,5 @@ impl XChachaPolyTV {
             eprintln!("Additional data: {}", self.ad.encode_hex::<String>());
             eprintln!("Outputs:");
             eprintln!("Ours: {}", ct_ours.encode_hex::<String>());
-            eprintln!("Lib
+            eprintln!("Libsodium: {}", ct_sodium.encode_hex::<String>());
+            panic!("... aborting. Please save and report th
