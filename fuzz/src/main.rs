@@ -180,4 +180,5 @@ impl XChachaPolyTV {
 /// Fuzz it!
 fn main() {
     // Load the amount of threads from the environment
-    let threads_str = env::var("THREADS").unwrap_or(num_cpus::get().
+    let threads_str = env::var("THREADS").unwrap_or(num_cpus::get().to_string());
+    let threads = usize::from_str(&threads_str).expect("Invalid value of THREA
