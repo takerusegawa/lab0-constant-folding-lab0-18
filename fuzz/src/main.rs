@@ -181,4 +181,7 @@ impl XChachaPolyTV {
 fn main() {
     // Load the amount of threads from the environment
     let threads_str = env::var("THREADS").unwrap_or(num_cpus::get().to_string());
-    let threads = usize::from_str(&threads_str).expect("Invalid value of THREA
+    let threads = usize::from_str(&threads_str).expect("Invalid value of THREADS");
+    
+    // Load the limit from environment
+    let limit_str = env::var("TEST_VECTOR_LIMIT").unwrap_or(26
