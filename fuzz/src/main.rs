@@ -184,4 +184,5 @@ fn main() {
     let threads = usize::from_str(&threads_str).expect("Invalid value of THREADS");
     
     // Load the limit from environment
-    let limit_str = env::var("TEST_VECTOR_LIMIT").unwrap_or(26
+    let limit_str = env::var("TEST_VECTOR_LIMIT").unwrap_or(264.to_string());
+    let limit = usize::from_str(&limit_str).expect("Invalid value of TEST_VECTOR_LIMIT");
