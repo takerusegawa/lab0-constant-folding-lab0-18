@@ -186,3 +186,8 @@ fn main() {
     // Load the limit from environment
     let limit_str = env::var("TEST_VECTOR_LIMIT").unwrap_or(264.to_string());
     let limit = usize::from_str(&limit_str).expect("Invalid value of TEST_VECTOR_LIMIT");
+    
+    // Start fuzzing threads
+    for _ in 0 .. threads {
+        let mut rng = SecureRng::new();
+        thread
