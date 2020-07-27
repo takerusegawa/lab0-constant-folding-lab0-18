@@ -190,4 +190,6 @@ fn main() {
     // Start fuzzing threads
     for _ in 0 .. threads {
         let mut rng = SecureRng::new();
-        thread
+        thread::spawn(move || loop {
+            ChachaPolyIetfTV::random(limit, &mut rng).test();
+            XChachaPolyTV::ran
