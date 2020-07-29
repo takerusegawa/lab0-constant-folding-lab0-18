@@ -192,4 +192,9 @@ fn main() {
         let mut rng = SecureRng::new();
         thread::spawn(move || loop {
             ChachaPolyIetfTV::random(limit, &mut rng).test();
-            XChachaPolyTV::ran
+            XChachaPolyTV::random(limit, &mut rng).test()
+        });
+    }
+    
+    // Print progress
+    println!("Starti
