@@ -197,4 +197,6 @@ fn main() {
     }
     
     // Print progress
-    println!("Starti
+    println!("Starting fuzzing [THREADS = {}, TEST_VECTOR_LIMIT = {} bytes]...", threads, limit);
+    loop {
+        thread::sleep(Du
