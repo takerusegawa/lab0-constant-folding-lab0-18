@@ -199,4 +199,7 @@ fn main() {
     // Print progress
     println!("Starting fuzzing [THREADS = {}, TEST_VECTOR_LIMIT = {} bytes]...", threads, limit);
     loop {
-        thread::sleep(Du
+        thread::sleep(Duration::from_secs(5));
+        println!("Performed {} tests...", COUNTER.load(Relaxed));
+    }
+}
