@@ -119,3 +119,22 @@ impl Cipher for ChaCha20Ietf {
             ciphertext_len => [buf, CHACHA20_MAX]
         );
         
+        // Encrypt the data
+        Self::xor(key, nonce, 0, &mut buf[..ciphertext_len]);
+        Ok(ciphertext_len)
+    }
+    fn decrypt_to(&self, buf: &mut[u8], ciphertext: &[u8], key: &[u8], nonce: &[u8])
+        -> Result<usize, Box<dyn Error + 'static>>
+    {
+        // Verify input
+        vfy_dec!(
+            key => [CHACHA20_KEY], nonce => [CHACHA20_NONCE],
+            ciphertext => [buf, CHACHA20_MAX]
+        );
+        
+        // Fill `buf` and encrypt the data in place
+        buf[..ciphertext.len()].copy_from_slice(ciphertext);
+        Self::xor(key, nonce, 0, &mut buf[..ciphertext.len()]);
+        Ok(ciphertext.len())
+    }
+}
