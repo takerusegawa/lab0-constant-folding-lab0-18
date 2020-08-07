@@ -6,4 +6,5 @@ use crypto_api::{
 use std::error::Error;
 
 
-/// The m
+/// The maximum amount of bytes that can be processed with one key/nonce combination
+#[cfg(target_pointer_width = "64")
