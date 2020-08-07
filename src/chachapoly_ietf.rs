@@ -7,4 +7,6 @@ use std::error::Error;
 
 
 /// The maximum amount of bytes that can be processed with one key/nonce combination
-#[cfg(target_pointer_width = "64")
+#[cfg(target_pointer_width = "64")]
+pub const CHACHAPOLY_MAX: usize = (4_294_967_296 - 1) * 64; // (2^32 - 1) * BLOCK_SIZE
+/// The m
