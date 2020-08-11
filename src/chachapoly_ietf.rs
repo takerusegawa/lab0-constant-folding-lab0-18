@@ -13,4 +13,6 @@ pub const CHACHAPOLY_MAX: usize = (4_294_967_296 - 1) * 64; // (2^32 - 1) * BLOC
 #[cfg(target_pointer_width = "32")]
 pub const CHACHAPOLY_MAX: usize = usize::max_value() - 16; // 2^32 - 1 - 16
 
-/// The size of a ChaChaPoly k
+/// The size of a ChaChaPoly key (256 bits/32 bytes)
+pub const CHACHAPOLY_KEY: usize = 32;
+/// The size of a ChaChaPoly nonce (96 bits/12
