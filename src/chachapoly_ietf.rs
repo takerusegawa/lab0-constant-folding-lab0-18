@@ -15,4 +15,7 @@ pub const CHACHAPOLY_MAX: usize = usize::max_value() - 16; // 2^32 - 1 - 16
 
 /// The size of a ChaChaPoly key (256 bits/32 bytes)
 pub const CHACHAPOLY_KEY: usize = 32;
-/// The size of a ChaChaPoly nonce (96 bits/12
+/// The size of a ChaChaPoly nonce (96 bits/12 bytes)
+pub const CHACHAPOLY_NONCE: usize = 12;
+/// The size of a ChaChaPoly authentication tag
+pub const
