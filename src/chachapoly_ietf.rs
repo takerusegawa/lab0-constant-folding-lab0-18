@@ -18,4 +18,7 @@ pub const CHACHAPOLY_KEY: usize = 32;
 /// The size of a ChaChaPoly nonce (96 bits/12 bytes)
 pub const CHACHAPOLY_NONCE: usize = 12;
 /// The size of a ChaChaPoly authentication tag
-pub const
+pub const CHACHAPOLY_TAG: usize = 16;
+
+
+/// Encrypts `data` in place and authenticates it with `ad` into `tag` using `key` a
