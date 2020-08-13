@@ -22,4 +22,8 @@ pub const CHACHAPOLY_TAG: usize = 16;
 
 
 /// Encrypts `data` in place and authenticates it with `ad` into `tag` using `key` and `nonce`
-pub fn chachapoly_seal(data: &mut[u8], tag: &mut[u8], ad: &[u8], key: &[u8], nonce:
+pub fn chachapoly_seal(data: &mut[u8], tag: &mut[u8], ad: &[u8], key: &[u8], nonce: &[u8]) {
+    // Encrypt the data
+    ChaCha20Ietf::xor(key, nonce, 1, data);
+    
+    // Creat
