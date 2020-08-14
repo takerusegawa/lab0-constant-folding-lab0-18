@@ -26,4 +26,6 @@ pub fn chachapoly_seal(data: &mut[u8], tag: &mut[u8], ad: &[u8], key: &[u8], non
     // Encrypt the data
     ChaCha20Ietf::xor(key, nonce, 1, data);
     
-    // Creat
+    // Create the footer
+    let mut foot = Vec::with_capacity(16);
+    foot.extend_from_slice(&(ad.len() as u64).to_le_
