@@ -28,4 +28,7 @@ pub fn chachapoly_seal(data: &mut[u8], tag: &mut[u8], ad: &[u8], key: &[u8], non
     
     // Create the footer
     let mut foot = Vec::with_capacity(16);
-    foot.extend_from_slice(&(ad.len() as u64).to_le_
+    foot.extend_from_slice(&(ad.len() as u64).to_le_bytes());
+    foot.extend_from_slice(&(data.len() as u64).to_le_bytes());
+    
+    // Compute the Pol
