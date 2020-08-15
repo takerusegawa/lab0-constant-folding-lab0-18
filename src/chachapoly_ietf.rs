@@ -31,4 +31,6 @@ pub fn chachapoly_seal(data: &mut[u8], tag: &mut[u8], ad: &[u8], key: &[u8], non
     foot.extend_from_slice(&(ad.len() as u64).to_le_bytes());
     foot.extend_from_slice(&(data.len() as u64).to_le_bytes());
     
-    // Compute the Pol
+    // Compute the Poly1305 key and the authentication tag
+    let mut pkey = vec![0; 32];
+    ChaCha20Ietf::xor(key, nonce, 0, &
