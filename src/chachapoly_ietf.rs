@@ -36,4 +36,5 @@ pub fn chachapoly_seal(data: &mut[u8], tag: &mut[u8], ad: &[u8], key: &[u8], non
     ChaCha20Ietf::xor(key, nonce, 0, &mut pkey);
     Poly1305::chachapoly_auth(tag, ad, data, &foot, &pkey);
 }
-/// Validates `data` with `ad
+/// Validates `data` with `ad` and decrypts it in place using `key` and `nonce`
+pub fn chachapoly_open(data: &mut[u8], tag: 
