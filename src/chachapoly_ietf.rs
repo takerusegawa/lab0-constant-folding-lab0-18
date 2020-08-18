@@ -40,4 +40,6 @@ pub fn chachapoly_seal(data: &mut[u8], tag: &mut[u8], ad: &[u8], key: &[u8], non
 pub fn chachapoly_open(data: &mut[u8], tag: &[u8], ad: &[u8], key: &[u8], nonce: &[u8])
     -> Result<(), Box<dyn Error + 'static>>
 {
-    // Cr
+    // Create the footer
+    let mut foot = Vec::with_capacity(16);
+    foot.extend_from_slice(&(ad
