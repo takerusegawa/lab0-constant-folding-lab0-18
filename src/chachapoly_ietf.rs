@@ -42,4 +42,7 @@ pub fn chachapoly_open(data: &mut[u8], tag: &[u8], ad: &[u8], key: &[u8], nonce:
 {
     // Create the footer
     let mut foot = Vec::with_capacity(16);
-    foot.extend_from_slice(&(ad
+    foot.extend_from_slice(&(ad.len() as u64).to_le_bytes());
+    foot.extend_from_slice(&(data.len() as u64).to_le_bytes());
+    
+    // Com
