@@ -48,4 +48,7 @@ pub fn chachapoly_open(data: &mut[u8], tag: &[u8], ad: &[u8], key: &[u8], nonce:
     // Compute the Poly1305 key and the authentication tag
     let (mut pkey, mut vfy_tag) = (vec![0; 32], vec![0; 16]);
     ChaCha20Ietf::xor(key, nonce, 0, &mut pkey);
-    Poly1305::chachapoly_auth(&mut vfy_tag, ad, data, &foot,
+    Poly1305::chachapoly_auth(&mut vfy_tag, ad, data, &foot, &pkey);
+    
+    // Validate the recomputed and the original tag
+    Ok(match eq_ct!(&tag, &vfy_t
