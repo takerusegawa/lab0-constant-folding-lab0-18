@@ -53,4 +53,10 @@ pub fn chachapoly_open(data: &mut[u8], tag: &[u8], ad: &[u8], key: &[u8], nonce:
     // Validate the recomputed and the original tag
     Ok(match eq_ct!(&tag, &vfy_tag) {
         true => ChaCha20Ietf::xor(key, nonce, 1, data),
-        false => Err(ChachaPolyError::
+        false => Err(ChachaPolyError::InvalidData)?
+    })
+}
+
+
+/// An implementation of the
+/// [ChachaPoly-IETF AEAD-construction](https://too
