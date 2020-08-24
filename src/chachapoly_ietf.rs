@@ -51,4 +51,6 @@ pub fn chachapoly_open(data: &mut[u8], tag: &[u8], ad: &[u8], key: &[u8], nonce:
     Poly1305::chachapoly_auth(&mut vfy_tag, ad, data, &foot, &pkey);
     
     // Validate the recomputed and the original tag
-    Ok(match eq_ct!(&tag, &vfy_t
+    Ok(match eq_ct!(&tag, &vfy_tag) {
+        true => ChaCha20Ietf::xor(key, nonce, 1, data),
+        false => Err(ChachaPolyError::
