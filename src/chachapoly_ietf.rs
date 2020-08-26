@@ -59,4 +59,7 @@ pub fn chachapoly_open(data: &mut[u8], tag: &[u8], ad: &[u8], key: &[u8], nonce:
 
 
 /// An implementation of the
-/// [ChachaPoly-IETF AEAD-construction](https://too
+/// [ChachaPoly-IETF AEAD-construction](https://tools.ietf.org/html/rfc8439)
+pub struct ChachaPolyIetf;
+impl ChachaPolyIetf {
+    /// Creates a `Cipher` instanc
