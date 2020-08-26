@@ -62,4 +62,6 @@ pub fn chachapoly_open(data: &mut[u8], tag: &[u8], ad: &[u8], key: &[u8], nonce:
 /// [ChachaPoly-IETF AEAD-construction](https://tools.ietf.org/html/rfc8439)
 pub struct ChachaPolyIetf;
 impl ChachaPolyIetf {
-    /// Creates a `Cipher` instanc
+    /// Creates a `Cipher` instance with `ChachaPolyIetf` as underlying cipher
+    pub fn cipher() -> Box<dyn Cipher> {
+        Box::n
