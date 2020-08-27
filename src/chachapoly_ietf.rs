@@ -64,4 +64,6 @@ pub struct ChachaPolyIetf;
 impl ChachaPolyIetf {
     /// Creates a `Cipher` instance with `ChachaPolyIetf` as underlying cipher
     pub fn cipher() -> Box<dyn Cipher> {
-        Box::n
+        Box::new(Self)
+    }
+    /// Creates a `AeadCipher` instance with `ChachaPolyIetf` as underlying AEAD cipher
