@@ -67,3 +67,9 @@ impl ChachaPolyIetf {
         Box::new(Self)
     }
     /// Creates a `AeadCipher` instance with `ChachaPolyIetf` as underlying AEAD cipher
+    pub fn aead_cipher() -> Box<dyn AeadCipher> {
+        Box::new(Self)
+    }
+}
+impl SecKeyGen for ChachaPolyIetf {
+ 
