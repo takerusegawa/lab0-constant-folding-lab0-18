@@ -73,4 +73,8 @@ impl ChachaPolyIetf {
 }
 impl SecKeyGen for ChachaPolyIetf {
     fn new_sec_key(&self, buf: &mut[u8], rng: &mut dyn SecureRng) -> Result<usize, Box<dyn Error + 'static>> {
-  
+        // Validate input
+        vfy_keygen!(CHACHAPOLY_KEY => buf);
+        
+        // Generate key
+        rng.rand
