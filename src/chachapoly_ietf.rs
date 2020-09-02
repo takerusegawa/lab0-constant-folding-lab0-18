@@ -77,4 +77,9 @@ impl SecKeyGen for ChachaPolyIetf {
         vfy_keygen!(CHACHAPOLY_KEY => buf);
         
         // Generate key
-        rng.rand
+        rng.random(&mut buf[..CHACHAPOLY_KEY])?;
+        Ok(CHACHAPOLY_KEY)
+    }
+}
+impl Cipher for ChachaPolyIetf {
+    fn info(&
