@@ -82,4 +82,7 @@ impl SecKeyGen for ChachaPolyIetf {
     }
 }
 impl Cipher for ChachaPolyIetf {
-    fn info(&
+    fn info(&self) -> CipherInfo {
+        CipherInfo {
+            name: "ChachaPolyIetf", is_otc: true,
+            
