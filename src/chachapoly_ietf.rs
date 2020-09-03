@@ -85,4 +85,5 @@ impl Cipher for ChachaPolyIetf {
     fn info(&self) -> CipherInfo {
         CipherInfo {
             name: "ChachaPolyIetf", is_otc: true,
-            
+            key_len_r: CHACHAPOLY_KEY..(CHACHAPOLY_KEY + 1),
+            nonce_len_r: CHACHAPOLY_NONCE..(CHACHAPOLY_
