@@ -86,4 +86,9 @@ impl Cipher for ChachaPolyIetf {
         CipherInfo {
             name: "ChachaPolyIetf", is_otc: true,
             key_len_r: CHACHAPOLY_KEY..(CHACHAPOLY_KEY + 1),
-            nonce_len_r: CHACHAPOLY_NONCE..(CHACHAPOLY_
+            nonce_len_r: CHACHAPOLY_NONCE..(CHACHAPOLY_NONCE + 1),
+            aead_tag_len_r: CHACHAPOLY_TAG..(CHACHAPOLY_TAG + 1)
+        }
+    }
+    
+    fn encry
