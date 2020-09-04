@@ -91,4 +91,8 @@ impl Cipher for ChachaPolyIetf {
         }
     }
     
-    fn encry
+    fn encrypted_len_max(&self, plaintext_len: usize) -> usize {
+        plaintext_len + 16
+    }
+    
+    fn encrypt(&s
