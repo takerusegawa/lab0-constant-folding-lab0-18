@@ -95,4 +95,5 @@ impl Cipher for ChachaPolyIetf {
         plaintext_len + 16
     }
     
-    fn encrypt(&s
+    fn encrypt(&self, buf: &mut[u8], plaintext_len: usize, key: &[u8], nonce: &[u8])
+        -> Result<usize, Box<dyn Error + 's
