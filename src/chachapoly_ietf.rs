@@ -100,4 +100,7 @@ impl Cipher for ChachaPolyIetf {
     {
         self.seal(buf, plaintext_len, &[], key, nonce)
     }
-    fn encrypt_to(&self, buf:
+    fn encrypt_to(&self, buf: &mut[u8], plaintext: &[u8], key: &[u8], nonce: &[u8])
+        -> Result<usize, Box<dyn Error + 'static>>
+    {
+        self.seal
