@@ -109,4 +109,6 @@ impl Cipher for ChachaPolyIetf {
     fn decrypt(&self, buf: &mut[u8], ciphertext_len: usize, key: &[u8], nonce: &[u8])
         -> Result<usize, Box<dyn Error + 'static>>
     {
-        
+        self.open(buf, ciphertext_len, &[], key, nonce)
+    }
+    fn decrypt_to(&self, buf: &mut[u8], cipherte
