@@ -118,4 +118,5 @@ impl Cipher for ChachaPolyIetf {
     }
 }
 impl AeadCipher for ChachaPolyIetf {
-    fn seal
+    fn seal(&self, buf: &mut[u8], plaintext_len: usize, ad: &[u8], key: &[u8], nonce: &[u8])
+     
