@@ -122,4 +122,6 @@ impl AeadCipher for ChachaPolyIetf {
         -> Result<usize, Box<dyn Error + 'static>>
     {
         // Verify input
-        vfy_seal!
+        vfy_seal!(
+            key => [CHACHAPOLY_KEY], nonce => [CHACHAPOLY_NONCE],
+            plaintext_len => [buf, CHACHAPOLY_
