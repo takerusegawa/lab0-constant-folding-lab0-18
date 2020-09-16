@@ -124,4 +124,8 @@ impl AeadCipher for ChachaPolyIetf {
         // Verify input
         vfy_seal!(
             key => [CHACHAPOLY_KEY], nonce => [CHACHAPOLY_NONCE],
-            plaintext_len => [buf, CHACHAPOLY_
+            plaintext_len => [buf, CHACHAPOLY_MAX]
+        );
+        
+        // Seal the data
+        let (data, tag) = buf.split_at_mut(plainte
