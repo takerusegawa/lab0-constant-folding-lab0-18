@@ -128,4 +128,5 @@ impl AeadCipher for ChachaPolyIetf {
         );
         
         // Seal the data
-        let (data, tag) = buf.split_at_mut(plainte
+        let (data, tag) = buf.split_at_mut(plaintext_len);
+        chachapoly_seal(data, &mut tag[..CHACHAPOLY_TAG], ad, key, nonce);
