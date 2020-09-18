@@ -130,3 +130,6 @@ impl AeadCipher for ChachaPolyIetf {
         // Seal the data
         let (data, tag) = buf.split_at_mut(plaintext_len);
         chachapoly_seal(data, &mut tag[..CHACHAPOLY_TAG], ad, key, nonce);
+        Ok(plaintext_len + CHACHAPOLY_TAG)
+    }
+    fn seal_to(&self, buf: &mut[u8], plaintext: 
