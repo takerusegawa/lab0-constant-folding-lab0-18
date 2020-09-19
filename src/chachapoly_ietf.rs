@@ -132,4 +132,6 @@ impl AeadCipher for ChachaPolyIetf {
         chachapoly_seal(data, &mut tag[..CHACHAPOLY_TAG], ad, key, nonce);
         Ok(plaintext_len + CHACHAPOLY_TAG)
     }
-    fn seal_to(&self, buf: &mut[u8], plaintext: 
+    fn seal_to(&self, buf: &mut[u8], plaintext: &[u8], ad: &[u8], key: &[u8], nonce: &[u8])
+        -> Result<usize, Box<dyn Error + 'static>>
+ 
