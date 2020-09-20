@@ -134,4 +134,7 @@ impl AeadCipher for ChachaPolyIetf {
     }
     fn seal_to(&self, buf: &mut[u8], plaintext: &[u8], ad: &[u8], key: &[u8], nonce: &[u8])
         -> Result<usize, Box<dyn Error + 'static>>
- 
+    {
+        // Verify input
+        vfy_seal!(
+            key => [CHACHAPOLY_KEY], nonce => [CHACHAPOLY_NO
