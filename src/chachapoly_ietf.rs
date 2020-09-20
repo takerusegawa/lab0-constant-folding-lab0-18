@@ -137,4 +137,8 @@ impl AeadCipher for ChachaPolyIetf {
     {
         // Verify input
         vfy_seal!(
-            key => [CHACHAPOLY_KEY], nonce => [CHACHAPOLY_NO
+            key => [CHACHAPOLY_KEY], nonce => [CHACHAPOLY_NONCE],
+            plaintext => [buf, CHACHAPOLY_MAX]
+        );
+        
+        // Copy the pla
