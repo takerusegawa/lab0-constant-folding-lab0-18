@@ -141,4 +141,6 @@ impl AeadCipher for ChachaPolyIetf {
             plaintext => [buf, CHACHAPOLY_MAX]
         );
         
-        // Copy the pla
+        // Copy the plaintext into buf and seal in place
+        let (data, tag) = buf.split_at_mut(plaintext.len());
+    
