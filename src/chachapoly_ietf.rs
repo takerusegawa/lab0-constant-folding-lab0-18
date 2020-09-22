@@ -143,4 +143,5 @@ impl AeadCipher for ChachaPolyIetf {
         
         // Copy the plaintext into buf and seal in place
         let (data, tag) = buf.split_at_mut(plaintext.len());
-    
+        data.copy_from_slice(plaintext);
+        chachapoly_seal(data, &mut tag[..CHACHAPOLY_TAG]
