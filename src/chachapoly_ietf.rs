@@ -148,4 +148,5 @@ impl AeadCipher for ChachaPolyIetf {
         Ok(plaintext.len() + CHACHAPOLY_TAG)
     }
     
-    fn open(&self, buf: &mut[u8], 
+    fn open(&self, buf: &mut[u8], ciphertext_len: usize, ad: &[u8], key: &[u8], nonce: &[u8])
+        -> Result<usize, Box<dyn Error + 'static>>
