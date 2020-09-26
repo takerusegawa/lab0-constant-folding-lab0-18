@@ -157,4 +157,6 @@ impl AeadCipher for ChachaPolyIetf {
             ciphertext_len => [buf, CHACHAPOLY_TAG, CHACHAPOLY_MAX]
         );
         
-        /
+        // Open the data
+        let (data, tag) = buf.split_at_mut(ciphertext_len - CHACHAPOLY_TAG);
+        chachapol
