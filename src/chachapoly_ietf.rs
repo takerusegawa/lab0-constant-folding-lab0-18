@@ -159,4 +159,7 @@ impl AeadCipher for ChachaPolyIetf {
         
         // Open the data
         let (data, tag) = buf.split_at_mut(ciphertext_len - CHACHAPOLY_TAG);
-        chachapol
+        chachapoly_open(data, &tag[..CHACHAPOLY_TAG], ad, key, nonce)?;
+        Ok(ciphertext_len - CHACHAPOLY_TAG)
+    }
+    fn open
