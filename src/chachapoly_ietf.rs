@@ -163,4 +163,8 @@ impl AeadCipher for ChachaPolyIetf {
         Ok(ciphertext_len - CHACHAPOLY_TAG)
     }
     fn open_to(&self, buf: &mut[u8], ciphertext: &[u8], ad: &[u8], key: &[u8], nonce: &[u8])
-        -> Result
+        -> Result<usize, Box<dyn Error + 'static>>
+    {
+        // Verify input
+        vfy_open!(
+            key => [CHA
