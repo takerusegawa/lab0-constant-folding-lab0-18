@@ -162,4 +162,5 @@ impl AeadCipher for ChachaPolyIetf {
         chachapoly_open(data, &tag[..CHACHAPOLY_TAG], ad, key, nonce)?;
         Ok(ciphertext_len - CHACHAPOLY_TAG)
     }
-    fn open
+    fn open_to(&self, buf: &mut[u8], ciphertext: &[u8], ad: &[u8], key: &[u8], nonce: &[u8])
+        -> Result
