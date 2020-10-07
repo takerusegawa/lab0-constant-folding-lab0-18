@@ -167,4 +167,6 @@ impl AeadCipher for ChachaPolyIetf {
     {
         // Verify input
         vfy_open!(
-            key => [CHA
+            key => [CHACHAPOLY_KEY], nonce => [CHACHAPOLY_NONCE],
+            ciphertext => [buf, CHACHAPOLY_TAG, CHACHAPOLY_MAX]
+     
