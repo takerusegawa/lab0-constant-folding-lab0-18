@@ -169,4 +169,7 @@ impl AeadCipher for ChachaPolyIetf {
         vfy_open!(
             key => [CHACHAPOLY_KEY], nonce => [CHACHAPOLY_NONCE],
             ciphertext => [buf, CHACHAPOLY_TAG, CHACHAPOLY_MAX]
-     
+        );
+        
+        // Copy the ciphertext into buf and decrypt in place
+        let 
