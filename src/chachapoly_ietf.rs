@@ -173,4 +173,5 @@ impl AeadCipher for ChachaPolyIetf {
         
         // Copy the ciphertext into buf and decrypt in place
         let (data, tag) = ciphertext.split_at(ciphertext.len() - CHACHAPOLY_TAG);
-        buf[..data.len()].
+        buf[..data.len()].copy_from_slice(data);
+        chachapoly_open(&mut buf[..data.len()], &tag[..CHACHAPOLY_TAG], ad,
