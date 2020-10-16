@@ -9,4 +9,7 @@ mod chachapoly_ietf;
 mod xchachapoly;
 
 pub use crate::{
-    chacha20_ietf::ChaCha20Ie
+    chacha20_ietf::ChaCha20Ietf, xchacha20::XChaCha20,
+    poly1305::Poly1305,
+    chachapoly_ietf::ChachaPolyIetf, xchachapoly::XChachaPoly
+};
