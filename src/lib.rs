@@ -13,3 +13,11 @@ pub use crate::{
     poly1305::Poly1305,
     chachapoly_ietf::ChachaPolyIetf, xchachapoly::XChachaPoly
 };
+pub use crypto_api;
+use std::{
+    error::Error,
+    fmt::{ self, Display, Formatter }
+};
+
+
+/// A ChaChaPoly-rela
