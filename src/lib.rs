@@ -23,4 +23,7 @@ use std::{
 /// A ChaChaPoly-related error
 #[derive(Debug, Eq, PartialEq, Copy, Clone)]
 pub enum ChachaPolyError {
-    /// The proces
+    /// The processed data is invalid (MAC-mismatch)
+    InvalidData,
+    /// An API misuse happened
+    ApiMisuse
