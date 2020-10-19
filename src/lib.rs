@@ -20,4 +20,7 @@ use std::{
 };
 
 
-/// A ChaChaPoly-rela
+/// A ChaChaPoly-related error
+#[derive(Debug, Eq, PartialEq, Copy, Clone)]
+pub enum ChachaPolyError {
+    /// The proces
