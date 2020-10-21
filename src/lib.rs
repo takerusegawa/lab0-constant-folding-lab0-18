@@ -26,4 +26,7 @@ pub enum ChachaPolyError {
     /// The processed data is invalid (MAC-mismatch)
     InvalidData,
     /// An API misuse happened
-    ApiMisuse
+    ApiMisuse(&'static str)
+}
+impl Display for ChachaPolyError {
+    fn fmt(&self, f: &mut Formatter) -> fmt::Res
