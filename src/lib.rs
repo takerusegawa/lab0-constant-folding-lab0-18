@@ -29,4 +29,8 @@ pub enum ChachaPolyError {
     ApiMisuse(&'static str)
 }
 impl Display for ChachaPolyError {
-    fn fmt(&self, f: &mut Formatter) -> fmt::Res
+    fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+        write!(f, "{:?}", self)
+    }
+}
+impl Error for ChachaPolyError {}
