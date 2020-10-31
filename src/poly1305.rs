@@ -9,4 +9,9 @@ use std::error::Error;
 /// The size of a Poly1305 key (256 bits/32 bytes)
 pub const POLY1305_KEY: usize = 32;
 /// The size of a ChaChaPoly authentication tag
-pub cons
+pub const POLY1305_TAG: usize = 16;
+
+
+/// An implementation of [Poly1305](https://tools.ietf.org/html/rfc8439)
+pub struct Poly1305;
+impl Po
