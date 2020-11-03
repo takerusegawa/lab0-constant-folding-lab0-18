@@ -15,4 +15,9 @@ pub const POLY1305_TAG: usize = 16;
 /// An implementation of [Poly1305](https://tools.ietf.org/html/rfc8439)
 pub struct Poly1305;
 impl Poly1305 {
-    /// Creates a `Mac` instance with `Poly1305` as underlying a
+    /// Creates a `Mac` instance with `Poly1305` as underlying algorithm
+    pub fn mac() -> Box<dyn Mac> {
+        Box::new(Self)
+    }
+    
+    /// A hel
