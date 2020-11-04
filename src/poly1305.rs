@@ -20,4 +20,5 @@ impl Poly1305 {
         Box::new(Self)
     }
     
-    /// A hel
+    /// A helper function for the ChachaPoly-IETF AEAD construction
+    pub(in crate) fn chachapoly_auth(tag: &mut
