@@ -21,4 +21,6 @@ impl Poly1305 {
     }
     
     /// A helper function for the ChachaPoly-IETF AEAD construction
-    pub(in crate) fn chachapoly_auth(tag: &mut
+    pub(in crate) fn chachapoly_auth(tag: &mut[u8], ad: &[u8], data: &[u8], foot: &[u8], key: &[u8]) {
+        // Init Poly1305
+        let (mut r, mut s, mut u
