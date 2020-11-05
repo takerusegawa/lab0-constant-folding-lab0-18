@@ -25,4 +25,7 @@ impl Poly1305 {
         // Init Poly1305
         let (mut r, mut s, mut u, mut a) = (vec![0; 5], vec![0; 4], vec![0; 5], vec![0; 5]);
         poly1305_init(&mut r, &mut s, &mut u, key);
-     
+        
+        // Process AD, data and the footer
+        poly1305_update(&mut a, &r, &u, ad, false);
+        poly1305_update(&mut a, &r,
