@@ -30,4 +30,8 @@ impl Poly1305 {
         poly1305_update(&mut a, &r, &u, ad, false);
         poly1305_update(&mut a, &r, &u, data, false);
         poly1305_update(&mut a, &r, &u, foot, true);
-        poly1305_finish(tag, &mut a, &mut s
+        poly1305_finish(tag, &mut a, &mut s);
+    }
+}
+impl SecKeyGen for Poly1305 {
+    fn new_sec_key(&self, buf: &mut[u8], rng: &mut dyn SecureRng) ->
