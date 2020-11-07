@@ -34,4 +34,6 @@ impl Poly1305 {
     }
 }
 impl SecKeyGen for Poly1305 {
-    fn new_sec_key(&self, buf: &mut[u8], rng: &mut dyn SecureRng) ->
+    fn new_sec_key(&self, buf: &mut[u8], rng: &mut dyn SecureRng) -> Result<usize, Box<dyn Error + 'static>> {
+        // Verify input
+        vfy_keygen!(POLY1305_KEY => bu
