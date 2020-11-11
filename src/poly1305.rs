@@ -46,4 +46,6 @@ impl SecKeyGen for Poly1305 {
 impl Mac for Poly1305 {
     fn info(&self) -> MacInfo {
         MacInfo {
-     
+            name: "Poly1305", is_otm: true,
+            mac_len: POLY1305_TAG,
+            mac_len_r
