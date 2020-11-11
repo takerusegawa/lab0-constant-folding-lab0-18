@@ -40,4 +40,10 @@ impl SecKeyGen for Poly1305 {
         
         // Generate key
         rng.random(&mut buf[..POLY1305_KEY])?;
-   
+        Ok(POLY1305_KEY)
+    }
+}
+impl Mac for Poly1305 {
+    fn info(&self) -> MacInfo {
+        MacInfo {
+     
