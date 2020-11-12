@@ -51,4 +51,6 @@ impl Mac for Poly1305 {
             mac_len_r: POLY1305_TAG..(POLY1305_TAG + 1),
             key_len_r: POLY1305_KEY..(POLY1305_KEY + 1)
         }
-   
+    }
+    
+    fn auth(&self, buf: &mut[u8], data: &[u8], key: &[u8]) -> Result<usize, Box<dyn Error + 'static>
