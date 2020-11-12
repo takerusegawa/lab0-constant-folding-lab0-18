@@ -48,4 +48,7 @@ impl Mac for Poly1305 {
         MacInfo {
             name: "Poly1305", is_otm: true,
             mac_len: POLY1305_TAG,
-            mac_len_r
+            mac_len_r: POLY1305_TAG..(POLY1305_TAG + 1),
+            key_len_r: POLY1305_KEY..(POLY1305_KEY + 1)
+        }
+   
