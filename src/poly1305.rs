@@ -53,4 +53,8 @@ impl Mac for Poly1305 {
         }
     }
     
-    fn auth(&self, buf: &mut[u8], data: &[u8], key: &[u8]) -> Result<usize, Box<dyn Error + 'static>
+    fn auth(&self, buf: &mut[u8], data: &[u8], key: &[u8]) -> Result<usize, Box<dyn Error + 'static>> {
+        // Verify input
+        vfy_auth!(key => [POLY1305_KEY], => [buf, POLY1305_TAG]);
+        
+       
