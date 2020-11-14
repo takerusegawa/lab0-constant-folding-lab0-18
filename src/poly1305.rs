@@ -57,4 +57,6 @@ impl Mac for Poly1305 {
         // Verify input
         vfy_auth!(key => [POLY1305_KEY], => [buf, POLY1305_TAG]);
         
-       
+        // Authenticate data
+        let (mut r, mut s, mut u, mut a) = (vec![0; 5], vec![0; 4], vec![0; 5], vec![0; 5]);
+        poly1
