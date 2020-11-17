@@ -59,4 +59,6 @@ impl Mac for Poly1305 {
         
         // Authenticate data
         let (mut r, mut s, mut u, mut a) = (vec![0; 5], vec![0; 4], vec![0; 5], vec![0; 5]);
-        poly1
+        poly1305_init(&mut r, &mut s, &mut u, key);
+        poly1305_update(&mut a, &r, &u, data, true);
+        poly1305_finish
