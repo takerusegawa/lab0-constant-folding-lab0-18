@@ -38,3 +38,94 @@ macro_rules! vfy_keygen {
 
 
 /// Verifies the encryption parameters
+macro_rules! vfy_enc {
+    ($key:expr => [$key_size:expr], $nonce:expr => [$nonce_size:expr],
+        $plaintext:expr => [$buf:expr, $plaintext_limit:expr]) =>
+    ({
+        #[allow(unused_imports)]
+        use $crate::verify_input::{ UsizeExt, SliceExt };
+        
+        let error = match true {
+            _ if $key._cv() != $key_size => Err("Invalid key length"),
+            _ if $nonce._cv() != $nonce_size => Err("Invalid nonce length"),
+            _ if $plaintext._cv() > $plaintext_limit => Err("Too much data"),
+            _ if $plaintext._cv() > $buf._cv() => Err("Buffer is too small"),
+            _ => Ok(())
+        };
+        error.map_err(|e| $crate::ChachaPolyError::ApiMisuse(e))?;
+    })
+    
+}
+/// Verifies the decryption parameters
+macro_rules! vfy_dec {
+    ($key:expr => [$key_size:expr], $nonce:expr => [$nonce_size:expr],
+        $ciphertext:expr => [$buf:expr, $ciphertext_limit:expr]) =>
+    ({
+        #[allow(unused_imports)]
+        use $crate::verify_input::{ UsizeExt, SliceExt };
+        
+        let error = match true {
+            _ if $key._cv() != $key_size => Err("Invalid key length"),
+            _ if $nonce._cv() != $nonce_size => Err("Invalid nonce length"),
+            _ if $ciphertext._cv() > $ciphertext_limit => Err("Too much data"),
+            _ if $ciphertext._cv() > $buf._cv() => Err("Buffer is too small"),
+            _ => Ok(())
+        };
+        error.map_err(|e| $crate::ChachaPolyError::ApiMisuse(e))?;
+    })
+}
+
+
+/// Verifies the authentication parameters
+macro_rules! vfy_auth {
+    ($key:expr => [$key_size:expr], => [$buf:expr, $tag_size:expr]) => ({
+        #[allow(unused_imports)]
+        use $crate::verify_input::{ UsizeExt, SliceExt };
+        
+        let error = match true {
+            _ if $key._cv() != $key_size => Err("Invalid key length"),
+            _ if $buf._cv() < $tag_size => Err("Buffer is too small"),
+            _ => Ok(())
+        };
+        error.map_err(|e| $crate::ChachaPolyError::ApiMisuse(e))?;
+    })
+}
+
+
+/// Verifies the sealing parameters
+macro_rules! vfy_seal {
+    ($key:expr => [$key_size:expr], $nonce:expr => [$nonce_const:expr],
+        $plaintext:expr => [$buf:expr, $plaintext_limit:expr]) =>
+    ({
+        #[allow(unused_imports)]
+        use $crate::verify_input::{ UsizeExt, SliceExt };
+        
+        let error = match true {
+            _ if $key._cv() != $key_size => Err("Invalid key length"),
+            _ if $nonce._cv() != $nonce_const => Err("Invalid nonce length"),
+            _ if $plaintext._cv() > $plaintext_limit => Err("Too much data"),
+            _ if $buf._cv() < $plaintext._cv() + CHACHAPOLY_TAG => Err("Buffer is too small"),
+            _ => Ok(())
+        };
+        error.map_err(|e| $crate::ChachaPolyError::ApiMisuse(e))?;
+    })
+}
+/// Verifies the parameters for opening in place
+macro_rules! vfy_open {
+    ($key:expr => [$key_size:expr], $nonce:expr => [$nonce_size:expr],
+        $ciphertext:expr => [$buf:expr, $tag_size:expr, $ciphertext_limit:expr]) =>
+    ({
+        #[allow(unused_imports)]
+        use $crate::verify_input::{ UsizeExt, SliceExt };
+    
+        let error = match true {
+            _ if $key._cv() != $key_size => Err("Invalid key length"),
+            _ if $nonce._cv() != $nonce_size => Err("Invalid nonce length"),
+            _ if $ciphertext._cv() > $ciphertext_limit => Err("Too much data"),
+            _ if $ciphertext._cv() < $tag_size => Err($crate::ChachaPolyError::InvalidData)?,
+            _ if $buf._cv() + $tag_size < $ciphertext._cv() => Err("Buffer is too small"),
+            _ => Ok(())
+        };
+        error.map_err(|e| $crate::ChachaPolyError::ApiMisuse(e))?;
+    })
+}
