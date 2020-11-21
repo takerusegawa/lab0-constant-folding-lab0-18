@@ -128,3 +128,17 @@ impl Cipher for XChaCha20 {
         Ok(ciphertext_len)
     }
     fn decrypt_to(&self, buf: &mut[u8], ciphertext: &[u8], key: &[u8], nonce: &[u8])
+        -> Result<usize, Box<dyn Error + 'static>>
+    {
+        // Verify input
+        vfy_dec!(
+            key => [XCHACHA20_KEY], nonce => [XCHACHA20_NONCE],
+            ciphertext => [buf, XCHACHA20_MAX]
+        );
+        
+        // Fill `buf` and encrypt the data in place
+        buf[..ciphertext.len()].copy_from_slice(ciphertext);
+        Self::xor(key, nonce, 0, &mut buf[..ciphertext.len()]);
+        Ok(ciphertext.len())
+    }
+}
