@@ -32,4 +32,7 @@
       "dec_buf_len": 263
     },
     "tests": [
-      
+      {
+        "name": "Invalid key length (< 32)",
+        "key_len": 31,
+        "error": "ApiMisuse(\"Invalid k
