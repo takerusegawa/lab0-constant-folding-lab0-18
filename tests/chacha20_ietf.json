@@ -43,4 +43,9 @@
         "error": "ApiMisuse(\"Invalid key length\")"
       },
       {
-        "name": "Invalid nonce length (< 12)
+        "name": "Invalid nonce length (< 12)",
+        "nonce_len": 11,
+        "error": "ApiMisuse(\"Invalid nonce length\")"
+      },
+      {
+       
