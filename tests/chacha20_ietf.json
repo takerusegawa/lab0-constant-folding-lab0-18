@@ -48,4 +48,6 @@
         "error": "ApiMisuse(\"Invalid nonce length\")"
       },
       {
-       
+        "name": "Invalid nonce length (> 12)",
+        "nonce_len": 13,
+        "error": "ApiMisuse(\"Invalid nonce leng
