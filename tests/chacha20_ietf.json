@@ -50,4 +50,8 @@
       {
         "name": "Invalid nonce length (> 12)",
         "nonce_len": 13,
-        "error": "ApiMisuse(\"Invalid nonce leng
+        "error": "ApiMisuse(\"Invalid nonce length\")"
+      },
+      {
+        "name": "Invalid buffer length (< input_len)",
+        "enc_buf_l
