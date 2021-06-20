@@ -9,4 +9,9 @@ use json::JsonValue;
 const TEST_VECTORS: &str = include_str!("chacha20_ietf.json");
 
 
-/// A crypto t
+/// A crypto test vector
+#[derive(Debug)]
+struct CryptoTestVector {
+    name: String,
+    key: Vec<u8>,
+    
