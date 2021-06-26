@@ -14,4 +14,9 @@ const TEST_VECTORS: &str = include_str!("chacha20_ietf.json");
 struct CryptoTestVector {
     name: String,
     key: Vec<u8>,
-    
+    nonce: Vec<u8>,
+    plaintext: Vec<u8>,
+    ciphertext: Vec<u8>
+}
+impl CryptoTestVector {
+    /// Loads the test vecto
