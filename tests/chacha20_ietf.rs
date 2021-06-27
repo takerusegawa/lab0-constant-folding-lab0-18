@@ -22,4 +22,7 @@ impl CryptoTestVector {
     /// Loads the test vectors
     pub fn load() -> Vec<Self> {
         let json = json::parse(TEST_VECTORS).unwrap();
-        let mut vecs = Ve
+        let mut vecs = Vec::new();
+        for vec in json["crypto"].checked_array_iter() {
+            vecs.push(Self {
+                name: vec["
