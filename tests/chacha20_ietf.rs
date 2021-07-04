@@ -28,4 +28,5 @@ impl CryptoTestVector {
                 name: vec["name"].checked_string(),
                 key: vec["key"].checked_bytes(),
                 nonce: vec["nonce"].checked_bytes(),
-    
+                plaintext: vec["plaintext"].checked_bytes(),
+                ciphertext: vec["ciphertext
