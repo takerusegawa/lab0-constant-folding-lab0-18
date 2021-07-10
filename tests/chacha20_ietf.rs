@@ -29,4 +29,11 @@ impl CryptoTestVector {
                 key: vec["key"].checked_bytes(),
                 nonce: vec["nonce"].checked_bytes(),
                 plaintext: vec["plaintext"].checked_bytes(),
-                ciphertext: vec["ciphertext
+                ciphertext: vec["ciphertext"].checked_bytes(),
+            });
+        }
+        vecs
+    }
+    
+    /// Tests the encryption
+    pub fn te
