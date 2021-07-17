@@ -36,4 +36,7 @@ impl CryptoTestVector {
     }
     
     /// Tests the encryption
-    pub fn te
+    pub fn test_encryption(&self) -> &Self {
+        // Encrypt in place
+        let mut buf = self.plaintext.clone();
+        ChaCha20Ietf::cip
