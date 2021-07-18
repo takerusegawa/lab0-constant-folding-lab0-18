@@ -44,4 +44,7 @@ impl CryptoTestVector {
             .unwrap();
         assert_eq!(buf, self.ciphertext, "Test vector: \"{}\"", self.name);
         
-        // Encrypt to b
+        // Encrypt to buffer
+        let mut buf = vec![0; self.ciphertext.len()];
+        ChaCha20Ietf::cipher()
+          
