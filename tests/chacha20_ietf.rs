@@ -47,4 +47,6 @@ impl CryptoTestVector {
         // Encrypt to buffer
         let mut buf = vec![0; self.ciphertext.len()];
         ChaCha20Ietf::cipher()
-          
+            .encrypt_to(&mut buf, &self.plaintext, &self.key, &self.nonce)
+            .unwrap();
+    
