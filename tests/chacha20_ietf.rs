@@ -49,4 +49,8 @@ impl CryptoTestVector {
         ChaCha20Ietf::cipher()
             .encrypt_to(&mut buf, &self.plaintext, &self.key, &self.nonce)
             .unwrap();
-    
+        assert_eq!(buf, self.ciphertext, "Test vector: \"{}\"", self.name);
+        
+        self
+    }
+   
