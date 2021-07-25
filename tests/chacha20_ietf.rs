@@ -53,4 +53,7 @@ impl CryptoTestVector {
         
         self
     }
-   
+    
+    /// Tests the decryption
+    pub fn test_decryption(&self) -> &Self {
+        // Decrypt in place
