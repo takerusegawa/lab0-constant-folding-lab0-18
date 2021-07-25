@@ -59,4 +59,6 @@ impl CryptoTestVector {
         // Decrypt in place
         let mut buf = self.ciphertext.clone();
         ChaCha20Ietf::cipher()
-            .decrypt(&mut buf, 
+            .decrypt(&mut buf, self.ciphertext.len(), &self.key, &self.nonce)
+            .unwrap();
+        assert_eq!(buf, self.pl
