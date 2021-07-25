@@ -57,3 +57,6 @@ impl CryptoTestVector {
     /// Tests the decryption
     pub fn test_decryption(&self) -> &Self {
         // Decrypt in place
+        let mut buf = self.ciphertext.clone();
+        ChaCha20Ietf::cipher()
+            .decrypt(&mut buf, 
