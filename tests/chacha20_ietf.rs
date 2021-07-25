@@ -64,4 +64,6 @@ impl CryptoTestVector {
         assert_eq!(buf, self.plaintext, "Test vector: \"{}\"", self.name);
         
         // Decrypt to buffer
-        let mut buf = vec![
+        let mut buf = vec![0; self.plaintext.len()];
+        ChaCha20Ietf::cipher()
+            .decrypt_to(&mut buf, &self.ciphertext, &self.
