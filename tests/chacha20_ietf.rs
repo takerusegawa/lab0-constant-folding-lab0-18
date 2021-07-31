@@ -75,4 +75,12 @@ impl CryptoTestVector {
 }
 #[test]
 fn test_crypto() {
-    for vec in CryptoTestVector::load() 
+    for vec in CryptoTestVector::load() {
+        vec.test_encryption().test_decryption();
+    }
+}
+
+
+/// An API test vector
+#[derive(Default, Clone, Debug)]
+pub str
