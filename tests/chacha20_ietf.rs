@@ -69,4 +69,10 @@ impl CryptoTestVector {
             .decrypt_to(&mut buf, &self.ciphertext, &self.key, &self.nonce)
             .unwrap();
         assert_eq!(buf, self.plaintext, "Test vector: \"{}\"", self.name);
-      
+        
+        self
+    }
+}
+#[test]
+fn test_crypto() {
+    for vec in CryptoTestVector::load() 
