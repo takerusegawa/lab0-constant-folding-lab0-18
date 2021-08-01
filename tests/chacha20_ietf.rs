@@ -87,4 +87,8 @@ pub struct ApiTestVector {
     name: String,
     key_len: usize,
     nonce_len: usize,
-    enc_
+    enc_input_len: usize,
+    enc_buf_len: usize,
+    dec_input_len: usize,
+    dec_buf_len: usize,
+    error: Str
