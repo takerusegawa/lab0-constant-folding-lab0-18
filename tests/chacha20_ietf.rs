@@ -91,4 +91,9 @@ pub struct ApiTestVector {
     enc_buf_len: usize,
     dec_input_len: usize,
     dec_buf_len: usize,
-    error: Str
+    error: String
+}
+impl ApiTestVector {
+    /// Loads the test vectors
+    pub fn load() -> Vec<Self> {
+        // Load t
