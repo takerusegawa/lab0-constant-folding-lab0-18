@@ -103,4 +103,6 @@ impl ApiTestVector {
         
         // Load the test vectors
         let mut vecs = Vec::new();
-        for vec
+        for vec in json["api"]["tests"].members() {
+            let mut this = defaults.clone();
+            this.load_
