@@ -112,4 +112,6 @@ impl ApiTestVector {
     }
     
     /// Tests the encryption
-    
+    pub fn test_encryption(&self) -> &Self {
+        // Prepare fake inputs
+        let key = vec![0; self.key_l
