@@ -141,4 +141,5 @@ impl ApiTestVector {
         let mut buf = vec![0; self.dec_buf_len];
         
         // Decrypt in place
-        l
+        let error = ChaCha20Ietf::cipher().decrypt(&mut buf, input.len(), &key, &nonce)
+            .error_or(format!("Test vector
