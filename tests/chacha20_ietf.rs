@@ -135,4 +135,6 @@ impl ApiTestVector {
     /// Tests the decryption
     pub fn test_decryption(&self) -> &Self {
         // Prepare fake inputs
-        let key = vec
+        let key = vec![0; self.key_len];
+        let nonce = vec![0; self.nonce_len];
+        let input = vec![0; self.dec_input_le
