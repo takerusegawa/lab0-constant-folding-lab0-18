@@ -142,4 +142,5 @@ impl ApiTestVector {
         
         // Decrypt in place
         let error = ChaCha20Ietf::cipher().decrypt(&mut buf, input.len(), &key, &nonce)
-            .error_or(format!("Test vector
+            .error_or(format!("Test vector: \"{}\"", self.name));
+        assert_eq!(error.to_string(), self.error, "Test vector: \"{}\"", self.name);
