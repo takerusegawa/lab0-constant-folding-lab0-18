@@ -155,4 +155,6 @@ impl ApiTestVector {
     
     /// Loads all existing/non-null fields from `j` into `self`
     fn load_json(&mut self, j: &JsonValue) {
-        self.name = j[
+        self.name = j["name"].optional_string(&self.name);
+        self.key_len = j["key_len"].optional_usize(self.key_len);
+        se
