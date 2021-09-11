@@ -157,4 +157,5 @@ impl ApiTestVector {
     fn load_json(&mut self, j: &JsonValue) {
         self.name = j["name"].optional_string(&self.name);
         self.key_len = j["key_len"].optional_usize(self.key_len);
-        se
+        self.nonce_len = j["nonce_len"].optional_usize(self.nonce_len);
+        self.enc_input_len = j["enc_input_len"].opt
