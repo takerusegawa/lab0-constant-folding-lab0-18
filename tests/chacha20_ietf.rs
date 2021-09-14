@@ -168,4 +168,6 @@ impl ApiTestVector {
 #[test]
 fn test_api() {
     for vec in ApiTestVector::load() {
-        vec.test_e
+        vec.test_encryption().test_decryption();
+    }
+}
