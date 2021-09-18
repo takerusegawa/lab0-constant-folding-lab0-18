@@ -84,3 +84,76 @@ fn test_crypto() {
     }
 }
 
+
+/// A MAC-error test vector
+#[derive(Debug)]
+struct ErrorTestVector {
+    name: String,
+    key: Vec<u8>,
+    nonce: Vec<u8>,
+    ad: Vec<u8>,
+    ciphertext: Vec<u8>
+}
+impl ErrorTestVector {
+    /// Loads the test vectors
+    pub fn load() -> Vec<Self> {
+        let json = json::parse(TEST_VECTORS).unwrap();
+        let mut vecs = Vec::new();
+        for vec in json["error"].checked_array_iter() {
+            vecs.push(Self {
+                name: vec["name"].checked_string(),
+                key: vec["key"].checked_bytes(),
+                nonce: vec["nonce"].checked_bytes(),
+                ad: vec["ad"].checked_bytes(),
+                ciphertext: vec["ciphertext"].checked_bytes(),
+            });
+        }
+        vecs
+    }
+    
+    /// Tests the decryption
+    pub fn test_decryption(&self) -> &Self {
+        // Decrypt in place
+        let mut buf = self.ciphertext.clone();
+        let error = ChachaPolyIetf::aead_cipher()
+            .open(&mut buf, self.ciphertext.len(), &self.ad, &self.key, &self.nonce)
+            .error_or(format!("Test vector: \"{}\"", self.name));
+        assert_eq!(error.to_string(), "InvalidData", "Test vector: \"{}\"", self.name);
+        
+        // Decrypt to buffer
+        let mut buf = vec![0; self.ciphertext.len()];
+        let error = ChachaPolyIetf::aead_cipher()
+            .open_to(&mut buf, &self.ciphertext, &self.ad, &self.key, &self.nonce)
+            .error_or(format!("Test vector: \"{}\"", self.name));
+        assert_eq!(error.to_string(), "InvalidData", "Test vector: \"{}\"", self.name);
+        
+        self
+    }
+}
+#[test]
+fn test_error() {
+    for vec in ErrorTestVector::load() {
+        vec.test_decryption();
+    }
+}
+
+
+/// An API test vector
+#[derive(Default, Clone, Debug)]
+pub struct ApiTestVector {
+    name: String,
+    key_len: usize,
+    nonce_len: usize,
+    ad_len: usize,
+    enc_input_len: usize,
+    enc_buf_len: usize,
+    dec_input_len: usize,
+    dec_buf_len: usize,
+    error: String
+}
+impl ApiTestVector {
+    /// Loads the test vectors
+    pub fn load() -> Vec<Self> {
+        // Load the JSON and create the default struct
+        let json = json::parse(TEST_VECTORS).unwrap();
+        let mut defaults = Self::default();
