@@ -162,3 +162,22 @@
         "key_len": 33,
         "error": "ApiMisuse(\"Invalid key length\")"
       },
+      {
+        "name": "Invalid nonce length (< 12)",
+        "nonce_len": 11,
+        "error": "ApiMisuse(\"Invalid nonce length\")"
+      },
+      {
+        "name": "Invalid nonce length (> 12)",
+        "nonce_len": 13,
+        "error": "ApiMisuse(\"Invalid nonce length\")"
+      },
+      {
+        "name": "Invalid buffer length (< input_len)",
+        "enc_buf_len": 278,
+        "dec_buf_len": 262,
+        "error": "ApiMisuse(\"Buffer is too small\")"
+      }
+    ]
+  }
+}
