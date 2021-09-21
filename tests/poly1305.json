@@ -1,4 +1,5 @@
 {
   "crypto": [
     {
-      "name":
+      "name": "RFC 8439 Test Vector #1 (null test vector)",
+      "key": "000000000000000000000000000000000000000000000
