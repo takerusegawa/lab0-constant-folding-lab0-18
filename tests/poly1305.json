@@ -7,4 +7,6 @@
       "mac": "00000000000000000000000000000000"
     },
     {
-      "name": "RFC 8439 Test Vector #2 (test the `s` half of the key)
+      "name": "RFC 8439 Test Vector #2 (test the `s` half of the key)",
+      "key": "0000000000000000000000000000000036e5f6b5c5e06070f0efca96227a863e",
+      "data": "416e79207375626d697
