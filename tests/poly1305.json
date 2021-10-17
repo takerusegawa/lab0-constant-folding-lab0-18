@@ -14,3 +14,5 @@
     },
     {
       "name": "RFC 8439 Test Vector #3 (test the `r` half of the key)",
+      "key": "36e5f6b5c5e06070f0efca96227a863e00000000000000000000000000000000",
+      "data": "416e7920737
