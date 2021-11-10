@@ -27,4 +27,8 @@
     {
       "name": "RFC 8439 Test Vector #5 (test 130-bit partial reduction)",
       "key": "0200000000000000000000000000000000000000000000000000000000000000",
-      "data": "fffffffffffffffffff
+      "data": "ffffffffffffffffffffffffffffffff",
+      "mac": "03000000000000000000000000000000"
+    },
+    {
+      "name": "RFC 8439 Test Vector
