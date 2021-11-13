@@ -31,4 +31,5 @@
       "mac": "03000000000000000000000000000000"
     },
     {
-      "name": "RFC 8439 Test Vector
+      "name": "RFC 8439 Test Vector #6 (test what happens if addition of s overflows modulo 2^128)",
+      "key": "02000000000000000000000000
