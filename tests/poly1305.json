@@ -37,4 +37,6 @@
       "mac": "03000000000000000000000000000000"
     },
     {
-      "name": "RFC 8439 Test Vector #7 (test carry from lower 
+      "name": "RFC 8439 Test Vector #7 (test carry from lower limb)",
+      "key": "0100000000000000000000000000000000000000000000000000000000000000",
+      "data": "
