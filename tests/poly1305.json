@@ -39,4 +39,5 @@
     {
       "name": "RFC 8439 Test Vector #7 (test carry from lower limb)",
       "key": "0100000000000000000000000000000000000000000000000000000000000000",
-      "data": "
+      "data": "fffffffffffffffffffffffffffffffff0ffffffffffffffffffffffffffffff11000000000000000000000000000000",
+      "
