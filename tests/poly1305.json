@@ -43,4 +43,5 @@
       "mac": "05000000000000000000000000000000"
     },
     {
-      "name": "RFC 8439 Test Vector 
+      "name": "RFC 8439 Test Vector #8 (test what happens if final result from polynomial part is exactly 2^130-5)",
+      "key": "0100000000000000000
