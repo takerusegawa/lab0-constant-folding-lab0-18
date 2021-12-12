@@ -55,4 +55,5 @@
       "mac": "faffffffffffffffffffffffffffffff"
     },
     {
-      "name": "RFC 8439 Test Vector #10 (test what happens if 5*H+L
+      "name": "RFC 8439 Test Vector #10 (test what happens if 5*H+L-type reduction produces 131-bit intermediate result)",
+      "key": "010000000000000004000000000000000000000000
