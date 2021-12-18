@@ -61,4 +61,6 @@
       "mac": "14000000000000005500000000000000"
     },
     {
-      "name": "RFC 8439 Test Vector #11 (test what happens if 5*H+L-type reduction produces 131-b
+      "name": "RFC 8439 Test Vector #11 (test what happens if 5*H+L-type reduction produces 131-bit final result)",
+      "key": "0100000000000000040000000000000000000000000000000000000000000000",
+    
