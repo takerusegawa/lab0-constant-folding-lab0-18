@@ -73,4 +73,10 @@
       "mac": "eead9d67890cbb22392336fea1851f38"
     }
   ],
-  "api":
+  "api": {
+    "defaults": {
+      "key_len": 32,
+      "data_len": 263,
+      "buf_len": 16
+    },
+    "
