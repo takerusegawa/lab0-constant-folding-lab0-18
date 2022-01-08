@@ -79,4 +79,8 @@
       "data_len": 263,
       "buf_len": 16
     },
-    "
+    "tests": [
+      {
+        "name": "Invalid key length (< 32)",
+        "key_len": 31,
+        "error": "ApiMisuse(
