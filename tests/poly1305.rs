@@ -102,3 +102,10 @@ impl ApiTestVector {
         self.buf_len = j["buf_len"].optional_usize(self.buf_len);
         self.error = j["error"].optional_string(&self.error);
     }
+}
+#[test]
+fn test_api() {
+    for vec in ApiTestVector::load() {
+        vec.test_mac();
+    }
+}
