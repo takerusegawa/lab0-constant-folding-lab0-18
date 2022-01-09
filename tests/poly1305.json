@@ -91,4 +91,8 @@
         "error": "ApiMisuse(\"Invalid key length\")"
       },
       {
-        "name": "Invalid buff
+        "name": "Invalid buffer length (< 16)",
+        "buf_len": 15,
+        "error": "ApiMisuse(\"Buffer is too small\")"
+      }
+    
