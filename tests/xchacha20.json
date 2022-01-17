@@ -13,4 +13,5 @@
       "ciphertext": "2f289d371f6f0abc3cb60d11d9b7b29adf6bc5ad843e8493e928448d"
     },
     {
-      "name": "https://github.com/jedisct1/libsodium/blob/ma
+      "name": "https://github.com/jedisct1/libsodium/blob/master/test/default/xchacha20.c Test Vector #3",
+      "key": "3d12800e7b014e88d68a73f0a95b04b43
