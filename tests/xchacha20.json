@@ -19,4 +19,5 @@
       "ciphertext": "a2c3c1406f33c054a92760a8e0666b84f84fa3a618f0"
     },
     {
-      "name"
+      "name": "https://github.com/jedisct1/libsodium/blob/master/test/default/xchacha20.c Test Vector #4",
+  
