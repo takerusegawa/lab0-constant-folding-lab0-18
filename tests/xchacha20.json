@@ -34,4 +34,7 @@
       "name": "https://github.com/jedisct1/libsodium/blob/master/test/default/xchacha20.c Test Vector #6",
       "key": "91319c9545c7c804ba6b712e22294c386fe31c4ff3d278827637b959d3dbaab2",
       "nonce": "410e854b2a911f174aaf1a56540fc3855851f41c65967a4e",
-      "ciphertext": "
+      "ciphertext": "cbe7d24177119b7fdfa8b06ee04dade4256ba7d35ffda6b89f014e479faef6"
+    },
+    {
+      "name": "https://github
