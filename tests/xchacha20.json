@@ -52,4 +52,7 @@
       "name": "https://github.com/jedisct1/libsodium/blob/master/test/default/xchacha20.c Test Vector #9",
       "key": "aface41a64a9a40cbc604d42bd363523bd762eb717f3e08fe2e0b4611eb4dcf3",
       "nonce": "6906e0383b895ab9f1cf3803f42f27c79ad47b681c552c63",
-      "ciphertext": "a5fa7c0190792ee17675d52ad7570f1fb0892239c76d6e802c26b5b3544d13151e67513b8aaa1ac5af2d7fd0d5e4216964324
+      "ciphertext": "a5fa7c0190792ee17675d52ad7570f1fb0892239c76d6e802c26b5b3544d13151e67513b8aaa1ac5af2d7fd0d5e4216964324838"
+    },
+    {
+      "name": "https://github.com/jedisct1/libsodium/blob/master/test/default/xchacha20.c
