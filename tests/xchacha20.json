@@ -72,4 +72,9 @@
     },
     "tests": [
       {
-        "name": "Inva
+        "name": "Invalid key length (< 32)",
+        "key_len": 31,
+        "error": "ApiMisuse(\"Invalid key length\")"
+      },
+      {
+  
