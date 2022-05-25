@@ -67,4 +67,9 @@
       "nonce_len": 24,
       "enc_input_len": 263,
       "enc_buf_len": 263,
-      "dec_input_len
+      "dec_input_len": 263,
+      "dec_buf_len": 263
+    },
+    "tests": [
+      {
+        "name": "Inva
