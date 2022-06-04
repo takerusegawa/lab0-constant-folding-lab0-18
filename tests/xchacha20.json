@@ -79,4 +79,9 @@
       {
         "name": "Invalid key length (> 32)",
         "key_len": 33,
-        "error": "ApiMisuse(\"Inva
+        "error": "ApiMisuse(\"Invalid key length\")"
+      },
+      {
+        "name": "Invalid nonce length (< 24)",
+        "nonce_len": 23,
+        "error": "Ap
