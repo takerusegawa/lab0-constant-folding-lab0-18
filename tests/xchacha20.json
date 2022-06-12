@@ -84,4 +84,8 @@
       {
         "name": "Invalid nonce length (< 24)",
         "nonce_len": 23,
-        "error": "Ap
+        "error": "ApiMisuse(\"Invalid nonce length\")"
+      },
+      {
+        "name": "Invalid nonce length (> 24)",
+  
