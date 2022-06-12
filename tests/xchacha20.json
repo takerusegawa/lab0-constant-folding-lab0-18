@@ -95,4 +95,8 @@
         "name": "Invalid buffer length (< input_len)",
         "enc_buf_len": 262,
         "dec_buf_len": 262,
-        "error"
+        "error": "ApiMisuse(\"Buffer is too small\")"
+      }
+    ]
+  }
+}
