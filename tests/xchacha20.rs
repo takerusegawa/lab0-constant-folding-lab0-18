@@ -13,4 +13,9 @@ const TEST_VECTORS: &str = include_str!("xchacha20.json");
 #[derive(Debug)]
 struct CryptoTestVector {
     name: String,
-    key:
+    key: Vec<u8>,
+    nonce: Vec<u8>,
+    ciphertext: Vec<u8>
+}
+impl CryptoTestVector {
+    /// Loads 
