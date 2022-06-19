@@ -18,4 +18,6 @@ struct CryptoTestVector {
     ciphertext: Vec<u8>
 }
 impl CryptoTestVector {
-    /// Loads 
+    /// Loads the test vectors
+    pub fn load() -> Vec<Self> {
+        let json = json::parse(TEST_VECTORS)
