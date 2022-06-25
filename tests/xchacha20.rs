@@ -25,4 +25,6 @@ impl CryptoTestVector {
         for vec in json["crypto"].checked_array_iter() {
             vecs.push(Self {
                 name: vec["name"].checked_string(),
-                ke
+                key: vec["key"].checked_bytes(),
+                nonce: vec["nonce"].checked_bytes(),
+                ciphertext:
