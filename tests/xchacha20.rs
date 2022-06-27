@@ -34,4 +34,6 @@ impl CryptoTestVector {
     }
     
     /// Tests the encryption
-    pub fn t
+    pub fn test_keystream_encryption(&self) -> &Self {
+        // Generate keystream
+        let mut buf = vec![0; s
