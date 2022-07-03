@@ -47,4 +47,6 @@ impl CryptoTestVector {
     
     /// Tests the decryption
     pub fn test_keystream_decryption(&self) -> &Self {
-        //
+        // Decrypt in place
+        let mut buf = vec![0; self.ciphertext.len()];
+        XChaCha2
