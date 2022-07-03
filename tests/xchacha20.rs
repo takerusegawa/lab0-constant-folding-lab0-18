@@ -38,4 +38,7 @@ impl CryptoTestVector {
         // Generate keystream
         let mut buf = vec![0; self.ciphertext.len()];
         XChaCha20::cipher()
-            .encrypt(&mut buf, self.ciphertext.len(), &self.key, &sel
+            .encrypt(&mut buf, self.ciphertext.len(), &self.key, &self.nonce)
+            .unwrap();
+        assert_eq!(buf, self.ciphertext, "Test vector: \"{}\"", self.name);
+  
