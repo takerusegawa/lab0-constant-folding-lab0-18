@@ -41,4 +41,10 @@ impl CryptoTestVector {
             .encrypt(&mut buf, self.ciphertext.len(), &self.key, &self.nonce)
             .unwrap();
         assert_eq!(buf, self.ciphertext, "Test vector: \"{}\"", self.name);
-  
+        
+        self
+    }
+    
+    /// Tests the decryption
+    pub fn test_keystream_decryption(&self) -> &Self {
+        //
