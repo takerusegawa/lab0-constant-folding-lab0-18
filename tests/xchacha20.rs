@@ -51,4 +51,8 @@ impl CryptoTestVector {
         let mut buf = vec![0; self.ciphertext.len()];
         XChaCha20::cipher()
             .decrypt(&mut buf, self.ciphertext.len(), &self.key, &self.nonce)
-            .unw
+            .unwrap();
+        assert_eq!(buf, self.ciphertext, "Test vector: \"{}\"", self.name);
+        
+        self
+   
