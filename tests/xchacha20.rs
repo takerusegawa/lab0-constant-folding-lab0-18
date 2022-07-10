@@ -55,4 +55,9 @@ impl CryptoTestVector {
         assert_eq!(buf, self.ciphertext, "Test vector: \"{}\"", self.name);
         
         self
-   
+    }
+}
+#[test]
+fn test_crypto() {
+    for vec in CryptoTestVector::load() {
+        vec.test_keystream_encryption().t
