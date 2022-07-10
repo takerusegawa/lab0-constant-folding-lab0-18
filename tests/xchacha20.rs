@@ -60,4 +60,12 @@ impl CryptoTestVector {
 #[test]
 fn test_crypto() {
     for vec in CryptoTestVector::load() {
-        vec.test_keystream_encryption().t
+        vec.test_keystream_encryption().test_keystream_decryption();
+    }
+}
+
+
+/// An API test vector
+#[derive(Default, Clone, Debug)]
+pub struct ApiTestVector {
+  
