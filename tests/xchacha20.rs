@@ -68,4 +68,9 @@ fn test_crypto() {
 /// An API test vector
 #[derive(Default, Clone, Debug)]
 pub struct ApiTestVector {
-  
+    name: String,
+    key_len: usize,
+    nonce_len: usize,
+    enc_input_len: usize,
+    enc_buf_len: usize,
+    dec
