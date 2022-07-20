@@ -73,4 +73,10 @@ pub struct ApiTestVector {
     nonce_len: usize,
     enc_input_len: usize,
     enc_buf_len: usize,
-    dec
+    dec_input_len: usize,
+    dec_buf_len: usize,
+    error: String
+}
+impl ApiTestVector {
+    /// Loads the test vectors
+    pu
