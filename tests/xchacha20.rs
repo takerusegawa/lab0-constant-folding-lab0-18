@@ -79,4 +79,6 @@ pub struct ApiTestVector {
 }
 impl ApiTestVector {
     /// Loads the test vectors
-    pu
+    pub fn load() -> Vec<Self> {
+        // Load the JSON and create the default struct
+        let js
