@@ -81,4 +81,6 @@ impl ApiTestVector {
     /// Loads the test vectors
     pub fn load() -> Vec<Self> {
         // Load the JSON and create the default struct
-        let js
+        let json = json::parse(TEST_VECTORS).unwrap();
+        let mut defaults = Self::default();
+        defaults.load_json(&j
