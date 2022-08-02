@@ -86,4 +86,7 @@ impl ApiTestVector {
         defaults.load_json(&json["api"]["defaults"]);
         
         // Load the test vectors
-        let mut vecs = Vec::new
+        let mut vecs = Vec::new();
+        for vec in json["api"]["tests"].members() {
+            let mut this = defaults.clone();
+            this
