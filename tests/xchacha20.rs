@@ -89,4 +89,11 @@ impl ApiTestVector {
         let mut vecs = Vec::new();
         for vec in json["api"]["tests"].members() {
             let mut this = defaults.clone();
-            this
+            this.load_json(vec);
+            vecs.push(this);
+        }
+        vecs
+    }
+    
+    /// Tests the encryption
+    pub fn te
