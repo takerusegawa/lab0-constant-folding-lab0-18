@@ -101,3 +101,7 @@ impl ApiTestVector {
         let key = vec![0; self.key_len];
         let nonce = vec![0; self.nonce_len];
         let input = vec![0; self.enc_input_len];
+        let mut buf = vec![0; self.enc_buf_len];
+        
+        // Encrypt in place
+        let error = XC
