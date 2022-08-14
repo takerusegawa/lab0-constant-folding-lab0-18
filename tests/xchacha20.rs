@@ -104,4 +104,5 @@ impl ApiTestVector {
         let mut buf = vec![0; self.enc_buf_len];
         
         // Encrypt in place
-        let error = XC
+        let error = XChaCha20::cipher().encrypt(&mut buf, input.len(), &key, &nonce)
+            .error_or(format!("Test vector: \
