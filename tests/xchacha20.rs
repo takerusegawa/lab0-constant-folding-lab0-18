@@ -106,4 +106,7 @@ impl ApiTestVector {
         // Encrypt in place
         let error = XChaCha20::cipher().encrypt(&mut buf, input.len(), &key, &nonce)
             .error_or(format!("Test vector: \"{}\"", self.name));
-        assert_eq!(error.to_string(), self.error, "Test vector: \"{}\"", self.
+        assert_eq!(error.to_string(), self.error, "Test vector: \"{}\"", self.name);
+        
+        // Encrypt in buffer
+        let error = XChaCha20::cipher().encrypt_to(&m
