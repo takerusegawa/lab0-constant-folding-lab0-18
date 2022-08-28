@@ -113,4 +113,10 @@ impl ApiTestVector {
             .error_or(format!("Test vector: \"{}\"", self.name));
         assert_eq!(error.to_string(), self.error, "Test vector: \"{}\"", self.name);
         
-        s
+        self
+    }
+    
+    /// Tests the decryption
+    pub fn test_decryption(&self) -> &Self {
+        // Prepare fake inputs
+ 
