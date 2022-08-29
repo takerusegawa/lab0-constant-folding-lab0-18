@@ -121,4 +121,8 @@ impl ApiTestVector {
         // Prepare fake inputs
         let key = vec![0; self.key_len];
         let nonce = vec![0; self.nonce_len];
-        let input = vec![0;
+        let input = vec![0; self.dec_input_len];
+        let mut buf = vec![0; self.dec_buf_len];
+        
+        // Decrypt in place
+     
