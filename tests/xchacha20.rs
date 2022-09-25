@@ -132,4 +132,9 @@ impl ApiTestVector {
         // Decrypt in buffer
         let error = XChaCha20::cipher().decrypt_to(&mut buf, &input, &key, &nonce)
             .error_or(format!("Test vector: \"{}\"", self.name));
-        assert_
+        assert_eq!(error.to_string(), self.error, "Test vector: \"{}\"", self.name);
+        
+        self
+    }
+    
+    /// 
