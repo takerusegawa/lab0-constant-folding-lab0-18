@@ -137,4 +137,5 @@ impl ApiTestVector {
         self
     }
     
-    /// 
+    /// Loads all existing/non-null fields from `j` into `self`
+    fn load_json(&mut self, j: &J
