@@ -146,4 +146,9 @@ impl ApiTestVector {
         self.enc_buf_len = j["enc_buf_len"].optional_usize(self.enc_buf_len);
         self.dec_input_len = j["dec_input_len"].optional_usize(self.dec_input_len);
         self.dec_buf_len = j["dec_buf_len"].optional_usize(self.dec_buf_len);
-        se
+        self.error = j["error"].optional_string(&self.error);
+    }
+}
+#[test]
+fn test_api() {
+    for vec in ApiTestVector::load()
