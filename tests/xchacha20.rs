@@ -151,4 +151,7 @@ impl ApiTestVector {
 }
 #[test]
 fn test_api() {
-    for vec in ApiTestVector::load()
+    for vec in ApiTestVector::load() {
+        vec.test_encryption().test_decryption();
+    }
+}
