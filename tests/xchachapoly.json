@@ -102,4 +102,8 @@
       {
         "name": "Invalid key length (< 32)",
         "key_len": 31,
-        "erro
+        "error": "ApiMisuse(\"Invalid key length\")"
+      },
+      {
+        "name": "Invalid key length (> 32)",
+        "k
