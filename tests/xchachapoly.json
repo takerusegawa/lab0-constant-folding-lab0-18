@@ -93,4 +93,7 @@
       "key_len": 32,
       "nonce_len": 24,
       "ad_len": 64,
-   
+      "enc_input_len": 263,
+      "enc_buf_len": 279,
+      "dec_input_len": 279,
+      "dec_buf_
